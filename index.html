@@ -3,474 +3,361 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>GarChéz Boutique | Nicaragua 🇳🇮</title>
 
-<link rel="stylesheet" href="activos/style.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#fbf7f5;color:#171515}
+a{text-decoration:none;color:inherit}
+
+.topbar{
+background:#171515;color:white;padding:10px;
+display:flex;justify-content:center;gap:45px;
+font-size:13px;flex-wrap:wrap
+}
+
+.header{background:white;border-bottom:1px solid #e5dcd9}
+
+.head{
+max-width:1400px;margin:auto;padding:18px 4%;
+display:grid;grid-template-columns:220px 1fr 180px;
+gap:25px;align-items:center
+}
+
+.logo{width:190px;display:block}
+
+.search{
+height:45px;border:1px solid #ddd;border-radius:8px;
+display:flex;align-items:center;padding:0 14px
+}
+
+.search input{
+border:0;outline:0;width:100%;font-size:15px
+}
+
+.actions{display:flex;justify-content:flex-end;gap:20px}
+.action{text-align:center;font-size:12px}
+.action b{display:block;font-size:23px}
+
+.nav{
+display:flex;justify-content:center;overflow-x:auto;
+border-top:1px solid #eee
+}
+
+.nav a{
+padding:15px 14px;white-space:nowrap;font-size:13px
+}
+
+.nav a:hover,.nav .active{background:#f3b7c0}
+
+.hero img{width:100%;display:block}
+
+.section{
+max-width:1400px;margin:auto;padding:55px 4%
+}
+
+.title{text-align:center;margin-bottom:30px}
+
+.title h1,.title h2{
+font-family:Georgia,serif;font-size:40px;margin:0 0 10px
+}
+
+.title p{color:#706967}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px
+}
+
+.cat{
+height:240px;
+position:relative;
+overflow:hidden;
+background:#ddd
+}
+
+.cat img{
+width:100%;height:100%;
+object-fit:cover;
+display:block
+}
+
+.cat:after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(transparent 35%,rgba(0,0,0,.75))
+}
+
+.cat div{
+position:absolute;
+z-index:2;
+bottom:15px;
+left:18px;
+color:white
+}
+
+.cat small{letter-spacing:2px}
+.cat h3{
+font-family:Georgia,serif;
+font-size:25px;
+margin:5px 0
+}
+
+.empty{
+background:white;
+padding:45px;
+text-align:center;
+border:1px dashed #d8ceca;
+color:#706967
+}
+
+.footer{
+background:#171515;color:white;
+padding:50px 5% 25px
+}
+
+.foot{
+max-width:1400px;margin:auto;
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1.3fr;
+gap:40px
+}
+
+.footer-logo{
+width:180px;background:white;padding:7px
+}
+
+.footer h3{font-size:15px}
+.footer p,.footer a{
+color:#bbb;font-size:13px;line-height:1.8
+}
+
+.footer a{display:block}
+
+.bottom{
+border-top:1px solid #3b3735;
+margin-top:30px;padding-top:18px;
+text-align:center;color:#888;font-size:11px
+}
+
+.whatsapp{
+position:fixed;
+right:20px;bottom:20px;
+width:58px;height:58px;
+border-radius:50%;
+background:#25D366;
+display:grid;place-items:center;
+box-shadow:0 5px 18px #555;
+z-index:99
+}
+
+.whatsapp span{font-size:28px;color:white}
+
+@media(max-width:900px){
+.head{grid-template-columns:1fr;text-align:center}
+.actions{justify-content:center}
+.categories{grid-template-columns:repeat(2,1fr)}
+.foot{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:600px){
+.categories{grid-template-columns:1fr}
+.foot{grid-template-columns:1fr}
+.title h1,.title h2{font-size:32px}
+}
+</style>
 </head>
 
 <body>
 
-<!-- BARRA SUPERIOR -->
 <div class="topbar">
-    <span>🚚 Envíos a toda 🇳🇮 Nicaragua</span>
-    <span>🚚 Envío GRATIS 📍 Chinandega y El Viejo 🇳🇮</span>
-    <span>🛡️ Compra segura</span>
+<span>🚚 Envíos a toda 🇳🇮 Nicaragua</span>
+<span>🚚 Envío GRATIS 📍 Chinandega y El Viejo 🇳🇮</span>
+<span>🛡️ Compra segura</span>
 </div>
 
-
-<!-- ENCABEZADO -->
 <header class="header">
 
-    <div class="head">
+<div class="head">
 
-        <a href="index.html">
-            <img
-                src="activos/logo.png"
-                class="logo"
-                alt="GarChéz Boutique">
-        </a>
+<a href="index.html">
+<img src="activos/logo.png" class="logo" alt="GarChéz Boutique">
+</a>
 
-        <div class="search">
-            <span>⌕</span>
-            <input
-                type="search"
-                id="search"
-                placeholder="¿Qué estás buscando?">
-        </div>
+<div class="search">
+<span>⌕</span>
+<input type="search" placeholder="¿Qué estás buscando?">
+</div>
 
-        <div class="actions">
+<div class="actions">
+<div class="action"><b>♙</b>Mi cuenta</div>
+<div class="action"><b>🛒</b>Carrito</div>
+</div>
 
-            <div class="action">
-                <b>♙</b>
-                <span>Mi cuenta</span>
-            </div>
+</div>
 
-            <div class="action">
-                <b>🛒</b>
-                <span>Carrito</span>
-            </div>
+<nav class="nav">
 
-        </div>
+<a href="index.html" class="active">Inicio</a>
+<a href="Damas/index.html">Damas</a>
+<a href="Caballeros/index.html">Caballeros</a>
+<a href="Calzado/index.html">Calzado</a>
+<a href="Bolsos/index.html">Bolsos</a>
+<a href="Gorras%20y%20Sombreros/index.html">Gorras y Sombreros</a>
+<a href="Relojes/index.html">Relojes</a>
+<a href="Accesorios/index.html">Accesorios</a>
+<a href="Temporada/index.html">Temporada</a>
+<a href="Hogar/index.html">Hogar</a>
+<a href="Lo%20Nuevo/index.html">Lo Nuevo</a>
+<a href="Ofertas/index.html">Ofertas</a>
 
-    </div>
-
-
-    <!-- MENÚ -->
-    <nav class="nav">
-
-        <a href="index.html" class="active">Inicio</a>
-
-        <a href="damas/index.html">Damas</a>
-
-        <a href="caballeros/index.html">Caballeros</a>
-
-        <a href="calzado/index.html">Calzado</a>
-
-        <a href="bolsos/index.html">Bolsos</a>
-
-        <a href="gorras-sombreros/index.html">
-            Gorras y Sombreros
-        </a>
-
-        <a href="relojes/index.html">Relojes</a>
-
-        <a href="accesorios/index.html">Accesorios</a>
-
-        <a href="temporada/index.html">Temporada</a>
-
-        <a href="hogar/index.html">Hogar</a>
-
-        <a href="lo-nuevo/index.html">Lo Nuevo</a>
-
-        <a href="ofertas/index.html">Ofertas</a>
-
-    </nav>
-
+</nav>
 </header>
-
 
 <main>
 
-
-<!-- PORTADA -->
 <section class="hero">
-
-    <img
-        src="activos/portada.png"
-        alt="GarChéz Boutique">
-
+<img src="activos/portada.png" alt="GarChéz Boutique">
 </section>
 
-
-
-<!-- CATEGORÍAS -->
 <section class="section">
 
-    <div class="title">
-
-        <h1>Explora nuestras categorías</h1>
-
-        <p>
-            Encuentra todo lo que buscas en GarChéz Boutique.
-        </p>
-
-    </div>
-
-
-    <div class="categories">
-
-
-        <a href="damas/index.html" class="cat">
-
-            <img
-                src="activos/damas.jpg"
-                alt="Damas">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Damas</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="caballeros/index.html" class="cat">
-
-            <img
-                src="activos/caballeros.jpg"
-                alt="Caballeros">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Caballeros</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="calzado/index.html" class="cat">
-
-            <img
-                src="activos/calzado.jpg"
-                alt="Calzado">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Calzado</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="bolsos/index.html" class="cat">
-
-            <img
-                src="activos/bolsos.jpg"
-                alt="Bolsos">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Bolsos</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="gorras-sombreros/index.html" class="cat">
-
-            <img
-                src="activos/gorras-sombreros.jpg"
-                alt="Gorras y Sombreros">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Gorras y Sombreros</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="relojes/index.html" class="cat">
-
-            <img
-                src="activos/relojes.jpg"
-                alt="Relojes">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Relojes</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="accesorios/index.html" class="cat">
-
-            <img
-                src="activos/accesorios.jpg"
-                alt="Accesorios">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Accesorios</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="temporada/index.html" class="cat">
-
-            <img
-                src="activos/temporada.jpg"
-                alt="Temporada">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Temporada</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="hogar/index.html" class="cat">
-
-            <img
-                src="activos/hogar.jpg"
-                alt="Hogar">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Hogar</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="lo-nuevo/index.html" class="cat">
-
-            <img
-                src="activos/lo-nuevo.jpg"
-                alt="Lo Nuevo">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Lo Nuevo</h3>
-            </div>
-
-        </a>
-
-
-
-        <a href="ofertas/index.html" class="cat">
-
-            <img
-                src="activos/ofertas.jpg"
-                alt="Ofertas">
-
-            <div>
-                <small>COLECCIÓN</small>
-                <h3>Ofertas</h3>
-            </div>
-
-        </a>
-
-    </div>
-
+<div class="title">
+<h1>Explora nuestras categorías</h1>
+<p>Encuentra todo lo que buscas en GarChéz Boutique.</p>
+</div>
+
+<div class="categories">
+
+<a href="Damas/index.html" class="cat">
+<img src="activos/damas.jpg">
+<div><small>COLECCIÓN</small><h3>Damas</h3></div>
+</a>
+
+<a href="Caballeros/index.html" class="cat">
+<img src="activos/caballeros.jpg">
+<div><small>COLECCIÓN</small><h3>Caballeros</h3></div>
+</a>
+
+<a href="Calzado/index.html" class="cat">
+<img src="activos/calzado.jpg">
+<div><small>COLECCIÓN</small><h3>Calzado</h3></div>
+</a>
+
+<a href="Bolsos/index.html" class="cat">
+<img src="activos/bolsos.jpg">
+<div><small>COLECCIÓN</small><h3>Bolsos</h3></div>
+</a>
+
+<a href="Gorras%20y%20Sombreros/index.html" class="cat">
+<img src="activos/gorras-sombreros.jpg">
+<div><small>COLECCIÓN</small><h3>Gorras y Sombreros</h3></div>
+</a>
+
+<a href="Relojes/index.html" class="cat">
+<img src="activos/relojes.jpg">
+<div><small>COLECCIÓN</small><h3>Relojes</h3></div>
+</a>
+
+<a href="Accesorios/index.html" class="cat">
+<img src="activos/accesorios.jpg">
+<div><small>COLECCIÓN</small><h3>Accesorios</h3></div>
+</a>
+
+<a href="Temporada/index.html" class="cat">
+<img src="activos/temporada.jpg">
+<div><small>COLECCIÓN</small><h3>Temporada</h3></div>
+</a>
+
+<a href="Hogar/index.html" class="cat">
+<img src="activos/hogar.jpg">
+<div><small>COLECCIÓN</small><h3>Hogar</h3></div>
+</a>
+
+<a href="Lo%20Nuevo/index.html" class="cat">
+<img src="activos/lo-nuevo.jpg">
+<div><small>COLECCIÓN</small><h3>Lo Nuevo</h3></div>
+</a>
+
+<a href="Ofertas/index.html" class="cat">
+<img src="activos/ofertas.jpg">
+<div><small>COLECCIÓN</small><h3>Ofertas</h3></div>
+</a>
+
+</div>
 </section>
 
-
-
-<!-- PRODUCTOS DESTACADOS -->
 <section class="section">
 
-    <div class="title">
+<div class="title">
+<h2>Productos destacados</h2>
+<p>Descubre nuestras novedades.</p>
+</div>
 
-        <h2>Productos destacados</h2>
-
-        <p>
-            Descubre nuestras novedades.
-        </p>
-
-    </div>
-
-
-    <div class="empty">
-
-        Aquí aparecerán tus productos destacados.
-
-    </div>
+<div class="empty">
+Aquí aparecerán tus productos destacados.
+</div>
 
 </section>
 
 </main>
 
-
-
-<!-- PIE DE PÁGINA -->
 <footer class="footer">
 
-    <div class="foot">
+<div class="foot">
 
+<div>
+<img src="activos/logo.png" class="footer-logo">
+<p>Moda, calzado, accesorios y mucho más para Nicaragua 🇳🇮.</p>
+</div>
 
-        <div>
+<div>
+<h3>Comprar</h3>
+<a href="Damas/index.html">Damas</a>
+<a href="Caballeros/index.html">Caballeros</a>
+<a href="Calzado/index.html">Calzado</a>
+<a href="Bolsos/index.html">Bolsos</a>
+</div>
 
-            <img
-                src="activos/logo.png"
-                class="footer-logo"
-                alt="GarChéz Boutique">
+<div>
+<h3>Más categorías</h3>
+<a href="Accesorios/index.html">Accesorios</a>
+<a href="Relojes/index.html">Relojes</a>
+<a href="Lo%20Nuevo/index.html">Lo Nuevo</a>
+<a href="Ofertas/index.html">Ofertas</a>
+</div>
 
-            <p>
-                Moda, calzado, accesorios y mucho más
-                para Nicaragua 🇳🇮.
-            </p>
+<div>
+<h3>GarChéz Boutique</h3>
+<p>
+<strong>Propietarios:</strong><br>
+Kevin Garcia<br>
+Keyling Sanchez
+</p>
 
-        </div>
+<p>
+📱 WhatsApp:
+<a href="https://wa.me/50587961399" target="_blank">
++505 8796-1399
+</a>
+<br>
+📍 Chinandega y El Viejo, 🇳🇮 Nicaragua
+</p>
+</div>
 
+</div>
 
-
-        <div>
-
-            <h3>Comprar</h3>
-
-            <a href="damas/index.html">Damas</a>
-
-            <a href="caballeros/index.html">Caballeros</a>
-
-            <a href="calzado/index.html">Calzado</a>
-
-            <a href="bolsos/index.html">Bolsos</a>
-
-        </div>
-
-
-
-        <div>
-
-            <h3>Más categorías</h3>
-
-            <a href="accesorios/index.html">Accesorios</a>
-
-            <a href="relojes/index.html">Relojes</a>
-
-            <a href="lo-nuevo/index.html">Lo Nuevo</a>
-
-            <a href="ofertas/index.html">Ofertas</a>
-
-        </div>
-
-
-
-        <div>
-
-            <h3>GarChéz Boutique</h3>
-
-            <p>
-
-                <strong>Propietarios:</strong><br>
-
-                Kevin Garcia<br>
-
-                Keyling Sanchez
-
-            </p>
-
-
-            <p>
-
-                📱 WhatsApp:
-
-                <a
-                    href="https://wa.me/50587961399"
-                    target="_blank">
-
-                    +505 8796-1399
-
-                </a>
-
-                <br>
-
-                📍 Chinandega y El Viejo,
-                🇳🇮 Nicaragua
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="bottom">
-
-        © 2026 GarChéz Boutique ·
-        Kevin Garcia & Keyling Sanchez
-
-    </div>
+<div class="bottom">
+© 2026 GarChéz Boutique · Kevin Garcia & Keyling Sanchez
+</div>
 
 </footer>
 
-
-
-<!-- BOTÓN WHATSAPP -->
-<a
-    class="whatsapp"
-    href="https://wa.me/50587961399"
-    target="_blank"
-    aria-label="Escribir por WhatsApp">
-
-    <svg
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg">
-
-        <path d="M19.11 17.36c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.57-1.48-1.84-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.59-.65 1.81-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-
-        <path d="M16.02 3C8.84 3 3 8.84 3 16.02c0 2.29.6 4.45 1.74 6.36L3 29l6.83-1.7a12.94 12.94 0 0 0 6.19 1.57h.01C23.2 28.87 29 23.05 29 16.02 29 8.84 23.2 3 16.02 3zm0 23.7h-.01a10.74 10.74 0 0 1-5.48-1.5l-.39-.23-4.05 1.01 1.08-3.95-.25-.41a10.72 10.72 0 1 1 9.1 5.08z"/>
-
-    </svg>
-
+<a class="whatsapp" href="https://wa.me/50587961399" target="_blank">
+<span>☏</span>
 </a>
-
-
-
-<script>
-
-const search =
-document.getElementById("search");
-
-search.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "Enter") {
-
-            const value =
-            search.value.trim();
-
-            if (value !== "") {
-
-                window.location.href =
-                "lo-nuevo/index.html?buscar=" +
-                encodeURIComponent(value);
-
-            }
-
-        }
-
-    }
-);
-
-</script>
-
 
 </body>
 </html>
