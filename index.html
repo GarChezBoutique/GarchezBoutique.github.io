@@ -1,593 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GarChéz Boutique | Nicaragua</title>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-
-:root{
-  --negro:#171515;
-  --rosa:#f5b9c2;
-  --rosa-claro:#f8eeee;
-  --crema:#fbf7f5;
-  --gris:#666;
-  --borde:#e8dfdc;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:'DM Sans',sans-serif;
-  color:var(--negro);
-  background:var(--crema);
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-/* BARRA SUPERIOR */
-
-.topbar{
-  background:#171515;
-  color:white;
-  min-height:38px;
-  display:flex;
-  align-items:center;
-  justify-content:space-around;
-  padding:8px 5%;
-  font-size:12px;
-}
-
-.topbar div{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-/* CABECERA */
-
-.header{
-  background:#fffaf8;
-  border-bottom:1px solid var(--borde);
-}
-
-.header-main{
-  min-height:108px;
-  display:grid;
-  grid-template-columns:250px 1fr 220px;
-  align-items:center;
-  gap:35px;
-  padding:15px 5%;
-}
-
-.logo{
-  width:210px;
-  max-height:90px;
-  object-fit:contain;
-  display:block;
-}
-
-.search{
-  height:48px;
-  border:1px solid #d8d0cd;
-  border-radius:8px;
-  background:white;
-  display:flex;
-  align-items:center;
-  padding:0 17px;
-}
-
-.search span{
-  font-size:21px;
-  margin-right:12px;
-}
-
-.search input{
-  width:100%;
-  border:0;
-  outline:0;
-  background:transparent;
-  font-size:14px;
-}
-
-.header-actions{
-  display:flex;
-  justify-content:flex-end;
-  gap:28px;
-}
-
-.action{
-  text-align:center;
-  font-size:13px;
-}
-
-.action-icon{
-  font-size:27px;
-  display:block;
-  margin-bottom:4px;
-}
-
-/* NAVEGACIÓN */
-
-.nav{
-  background:white;
-  border-top:1px solid var(--borde);
-  border-bottom:1px solid var(--borde);
-  display:flex;
-  justify-content:center;
-  overflow-x:auto;
-}
-
-.nav a{
-  padding:17px 18px;
-  white-space:nowrap;
-  font-size:14px;
-  transition:.2s;
-}
-
-.nav a:hover,
-.nav a.active{
-  background:var(--rosa);
-}
-
-/* PORTADA */
-
-.hero{
-  width:100%;
-  background:#ddd;
-}
-
-.hero img{
-  width:100%;
-  display:block;
-  height:auto;
-}
-
-/* BENEFICIOS */
-
-.benefits{
-  background:#171515;
-  color:white;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-}
-
-.benefit{
-  padding:22px 15px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:12px;
-  border-right:1px solid #514b49;
-}
-
-.benefit:last-child{
-  border-right:0;
-}
-
-.benefit-icon{
-  color:var(--rosa);
-  font-size:29px;
-}
-
-.benefit strong{
-  display:block;
-  font-size:14px;
-  margin-bottom:3px;
-}
-
-.benefit small{
-  color:#d0cbca;
-  font-size:11px;
-}
-
-/* SECCIONES */
-
-.section{
-  padding:65px 5%;
-}
-
-.section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  margin-bottom:30px;
-}
-
-.section-title h2{
-  font-family:'Playfair Display',serif;
-  font-size:40px;
-  font-weight:600;
-}
-
-.section-title p{
-  color:var(--gris);
-  font-size:14px;
-  margin-top:5px;
-}
-
-/* CATEGORÍAS */
-
-.categories{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-}
-
-.category{
-  min-height:270px;
-  position:relative;
-  overflow:hidden;
-  background:#ddd;
-  cursor:pointer;
-}
-
-.category img{
-  width:100%;
-  height:100%;
-  min-height:270px;
-  object-fit:cover;
-  display:block;
-  transition:transform .5s;
-}
-
-.category:hover img{
-  transform:scale(1.05);
-}
-
-.category-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,.72),
-    rgba(0,0,0,.05) 65%
-  );
-}
-
-.category-text{
-  position:absolute;
-  bottom:22px;
-  left:22px;
-  color:white;
-}
-
-.category-text small{
-  font-size:10px;
-  letter-spacing:2px;
-}
-
-.category-text h3{
-  font-family:'Playfair Display',serif;
-  font-size:27px;
-  margin:5px 0;
-}
-
-.category-text span{
-  font-size:12px;
-}
-
-/* PRODUCTOS */
-
-.products{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-
-.product{
-  background:white;
-  border:1px solid #eee4e1;
-  position:relative;
-}
-
-.product-photo{
-  height:330px;
-  background:#eee;
-  overflow:hidden;
-}
-
-.product-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.4s;
-}
-
-.product:hover .product-photo img{
-  transform:scale(1.04);
-}
-
-.product-info{
-  padding:17px;
-}
-
-.product-info h3{
-  font-size:15px;
-  margin-bottom:8px;
-}
-
-.price{
-  font-size:16px;
-  font-weight:700;
-}
-
-.product-button{
-  width:100%;
-  border:0;
-  background:#171515;
-  color:white;
-  padding:12px;
-  margin-top:14px;
-  font-size:12px;
-  letter-spacing:.5px;
-  cursor:pointer;
-}
-
-.product-button:hover{
-  background:#333;
-}
-
-/* BANNER */
-
-.banner{
-  margin:0 5% 65px;
-  background:#f2dedf;
-  padding:55px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:30px;
-}
-
-.banner h2{
-  font-family:'Playfair Display',serif;
-  font-size:39px;
-}
-
-.banner p{
-  color:#555;
-  margin-top:8px;
-}
-
-.button{
-  display:inline-block;
-  background:#171515;
-  color:white;
-  padding:14px 27px;
-  font-size:13px;
-  white-space:nowrap;
-}
-
-/* NEWSLETTER */
-
-.newsletter{
-  text-align:center;
-  background:white;
-  padding:65px 20px;
-  border-top:1px solid var(--borde);
-}
-
-.newsletter h2{
-  font-family:'Playfair Display',serif;
-  font-size:38px;
-}
-
-.newsletter p{
-  color:#666;
-  margin:10px 0 25px;
-}
-
-/* FOOTER */
-
-.footer{
-  background:#171515;
-  color:white;
-  padding:55px 5% 30px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:50px;
-}
-
-.footer-logo{
-  width:190px;
-  background:white;
-  padding:8px;
-}
-
-.footer h3{
-  font-size:14px;
-  margin-bottom:15px;
-}
-
-.footer p,
-.footer a{
-  color:#bbb;
-  font-size:13px;
-  line-height:2;
-}
-
-.footer-bottom{
-  border-top:1px solid #3d3938;
-  margin-top:40px;
-  padding-top:20px;
-  color:#888;
-  font-size:11px;
-  text-align:center;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#25D366;
-  color:white;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:27px;
-  z-index:50;
-  box-shadow:0 5px 20px rgba(0,0,0,.25);
-}
-
-/* MÓVIL */
-
-@media(max-width:1000px){
-
-  .header-main{
-    grid-template-columns:1fr;
-    justify-items:center;
-    gap:15px;
-  }
-
-  .header-actions{
-    justify-content:center;
-  }
-
-  .categories,
-  .products{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .benefits{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:600px){
-
-  .topbar{
-    font-size:10px;
-    gap:10px;
-  }
-
-  .topbar div:nth-child(3){
-    display:none;
-  }
-
-  .logo{
-    width:170px;
-  }
-
-  .categories,
-  .products{
-    grid-template-columns:1fr;
-  }
-
-  .benefits{
-    grid-template-columns:1fr;
-  }
-
-  .benefit{
-    border-right:0;
-    border-bottom:1px solid #514b49;
-  }
-
-  .section{
-    padding:45px 5%;
-  }
-
-  .section-title h2{
-    font-size:31px;
-  }
-
-  .banner{
-    margin:0 5% 45px;
-    padding:40px 25px;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .banner h2{
-    font-size:31px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
 
-<!-- BARRA SUPERIOR -->
-
 <div class="topbar">
-
-  <div>🚚 Envíos a todo 🇳🇮 Nicaragua</div>
-
-  <div>📍 Envío GRATIS en Chinandega y El Viejo</div>
-
-  <div>🛡️ Compra segura</div>
-
+  <span>🚚 Envíos a todo 🇳🇮 Nicaragua</span>
+  <span>📍 Envío GRATIS en Chinandega y El Viejo</span>
+  <span>🛡️ Compra segura</span>
 </div>
-
-
-<!-- CABECERA -->
 
 <header class="header">
 
-  <div class="header-main">
+  <div class="head">
 
     <a href="index.html">
-      <img src="assets/logo.png"
-           class="logo"
-           alt="GarChéz Boutique">
+      <img
+        class="logo"
+        src="assets/logo.png"
+        alt="GarChéz Boutique">
     </a>
 
     <div class="search">
       <span>⌕</span>
       <input
-        type="text"
-        placeholder="¿Qué estás buscando?"
-        id="searchInput">
+        id="search"
+        placeholder="¿Qué estás buscando?">
     </div>
 
-    <div class="header-actions">
+    <div class="actions">
 
       <div class="action">
-        <span class="action-icon">♙</span>
+        <b>♙</b>
         Mi cuenta
       </div>
 
       <div class="action">
-        <span class="action-icon">🛒</span>
+        <b>🛒</b>
         Carrito
       </div>
 
     </div>
 
   </div>
-
-
-  <!-- MENÚ COMPLETO -->
 
   <nav class="nav">
 
@@ -601,7 +61,9 @@ a{
 
     <a href="bolsos/index.html">Bolsos</a>
 
-    <a href="gorras-sombreros/index.html">Gorras y Sombreros</a>
+    <a href="gorras-sombreros/index.html">
+      Gorras y Sombreros
+    </a>
 
     <a href="relojes/index.html">Relojes</a>
 
@@ -620,426 +82,245 @@ a{
 </header>
 
 
-<!-- PORTADA EXACTA -->
+<main>
 
-<section class="hero">
+  <!-- PORTADA QUE APROBASTE -->
 
-  <img
-    src="assets/portada.png"
-    alt="GarChéz Boutique - Estilo que habla por ti">
+  <section class="hero">
 
-</section>
+    <img
+      src="assets/portada.png"
+      alt="GarChéz Boutique — Estilo que habla por ti">
 
-
-<!-- BENEFICIOS -->
-
-<section class="benefits">
-
-  <div class="benefit">
-    <div class="benefit-icon">♧</div>
-    <div>
-      <strong>Envíos a todo 🇳🇮 Nicaragua</strong>
-      <small>Recibe tus pedidos donde estés.</small>
-    </div>
-  </div>
-
-  <div class="benefit">
-    <div class="benefit-icon">♢</div>
-    <div>
-      <strong>Compra segura</strong>
-      <small>Atención personalizada.</small>
-    </div>
-  </div>
-
-  <div class="benefit">
-    <div class="benefit-icon">▣</div>
-    <div>
-      <strong>Múltiples métodos de pago</strong>
-      <small>Compra de forma fácil.</small>
-    </div>
-  </div>
-
-  <div class="benefit">
-    <div class="benefit-icon">♡</div>
-    <div>
-      <strong>Moda que te hace brillar</strong>
-      <small>Seleccionada para ti.</small>
-    </div>
-  </div>
-
-</section>
+  </section>
 
 
-<!-- CATEGORÍAS -->
+  <!-- CATEGORÍAS -->
 
-<section class="section">
+  <section class="section">
 
-  <div class="section-title">
+    <div class="title">
 
-    <div>
       <h2>Explora nuestras categorías</h2>
-      <p>Encuentra exactamente lo que estás buscando.</p>
+
+      <p>
+        Todo lo que buscas, organizado para que
+        encuentres rápido lo que te encanta.
+      </p>
+
     </div>
 
-  </div>
 
+    <div class="categories">
 
-  <div class="categories">
 
+      <a class="cat" href="damas/index.html">
 
-    <a href="damas/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
-        alt="Damas">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>COLECCIÓN</small>
-        <h3>Damas</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="caballeros/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=85"
-        alt="Caballeros">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>COLECCIÓN</small>
-        <h3>Caballeros</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="calzado/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
-        alt="Calzado">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>SELECCIÓN</small>
-        <h3>Calzado</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="bolsos/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85"
-        alt="Bolsos">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>ACCESORIOS</small>
-        <h3>Bolsos</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="gorras-sombreros/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=85"
-        alt="Gorras y Sombreros">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>ESTILO</small>
-        <h3>Gorras y Sombreros</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="relojes/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85"
-        alt="Relojes">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>DETALLES</small>
-        <h3>Relojes</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="accesorios/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85"
-        alt="Accesorios">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>DETALLES</small>
-        <h3>Accesorios</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="hogar/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=85"
-        alt="Hogar">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>HOGAR</small>
-        <h3>Hogar</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="temporada/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=85"
-        alt="Temporada">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>COLECCIÓN</small>
-        <h3>Temporada</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="lo-nuevo/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
-        alt="Lo Nuevo">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>RECIÉN LLEGADO</small>
-        <h3>Lo Nuevo</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-
-    <a href="ofertas/index.html" class="category">
-
-      <img
-        src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85"
-        alt="Ofertas">
-
-      <div class="category-overlay"></div>
-
-      <div class="category-text">
-        <small>ESPECIALES</small>
-        <h3>Ofertas</h3>
-        <span>Ver productos →</span>
-      </div>
-
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- PRODUCTOS DESTACADOS -->
-
-<section class="section">
-
-  <div class="section-title">
-
-    <div>
-      <h2>Productos destacados</h2>
-      <p>Seleccionados especialmente para ti.</p>
-    </div>
-
-    <a href="lo-nuevo/index.html" class="button">
-      Ver todos →
-    </a>
-
-  </div>
-
-
-  <div class="products">
-
-
-    <div class="product">
-
-      <div class="product-photo">
         <img
-          src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85"
-          alt="Producto">
-      </div>
+          src="assets/damas.jpg"
+          alt="Damas">
 
-      <div class="product-info">
-        <h3>Chaqueta elegante</h3>
-        <div class="price">C$ 1,500</div>
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Damas</h3>
+          <span>Ver productos →</span>
+        </div>
 
-        <button
-          class="product-button"
-          onclick="comprar('Chaqueta elegante')">
-          COMPRAR POR WHATSAPP
-        </button>
-      </div>
-
-    </div>
+      </a>
 
 
-    <div class="product">
+      <a class="cat" href="caballeros/index.html">
 
-      <div class="product-photo">
         <img
-          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85"
-          alt="Producto">
-      </div>
+          src="assets/caballeros.jpg"
+          alt="Caballeros">
 
-      <div class="product-info">
-        <h3>Vestido Boutique</h3>
-        <div class="price">C$ 1,350</div>
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Caballeros</h3>
+          <span>Ver productos →</span>
+        </div>
 
-        <button
-          class="product-button"
-          onclick="comprar('Vestido Boutique')">
-          COMPRAR POR WHATSAPP
-        </button>
-      </div>
-
-    </div>
+      </a>
 
 
-    <div class="product">
+      <a class="cat" href="calzado/index.html">
 
-      <div class="product-photo">
         <img
-          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"
+          src="assets/calzado.jpg"
           alt="Calzado">
-      </div>
 
-      <div class="product-info">
-        <h3>Calzado urbano</h3>
-        <div class="price">C$ 1,500</div>
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Calzado</h3>
+          <span>Ver productos →</span>
+        </div>
 
-        <button
-          class="product-button"
-          onclick="comprar('Calzado urbano')">
-          COMPRAR POR WHATSAPP
-        </button>
-      </div>
-
-    </div>
+      </a>
 
 
-    <div class="product">
+      <a class="cat" href="bolsos/index.html">
 
-      <div class="product-photo">
         <img
-          src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=85"
-          alt="Bolso">
-      </div>
+          src="assets/bolsos.jpg"
+          alt="Bolsos">
 
-      <div class="product-info">
-        <h3>Bolso clásico</h3>
-        <div class="price">C$ 1,200</div>
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Bolsos</h3>
+          <span>Ver productos →</span>
+        </div>
 
-        <button
-          class="product-button"
-          onclick="comprar('Bolso clásico')">
-          COMPRAR POR WHATSAPP
-        </button>
-      </div>
+      </a>
+
+
+      <a class="cat" href="gorras-sombreros/index.html">
+
+        <img
+          src="assets/gorras-sombreros.jpg"
+          alt="Gorras y Sombreros">
+
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Gorras y Sombreros</h3>
+          <span>Ver productos →</span>
+        </div>
+
+      </a>
+
+
+      <a class="cat" href="relojes/index.html">
+
+        <img
+          src="assets/relojes.jpg"
+          alt="Relojes">
+
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Relojes</h3>
+          <span>Ver productos →</span>
+        </div>
+
+      </a>
+
+
+      <a class="cat" href="accesorios/index.html">
+
+        <img
+          src="assets/accesorios.jpg"
+          alt="Accesorios">
+
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Accesorios</h3>
+          <span>Ver productos →</span>
+        </div>
+
+      </a>
+
+
+      <a class="cat" href="temporada/index.html">
+
+        <img
+          src="assets/temporada.jpg"
+          alt="Temporada">
+
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Temporada</h3>
+          <span>Ver productos →</span>
+        </div>
+
+      </a>
+
+
+      <a class="cat" href="hogar/index.html">
+
+        <img
+          src="assets/hogar.jpg"
+          alt="Hogar">
+
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Hogar</h3>
+          <span>Ver productos →</span>
+        </div>
+
+      </a>
+
+
+      <a class="cat" href="lo-nuevo/index.html">
+
+        <img
+          src="assets/lo-nuevo.jpg"
+          alt="Lo Nuevo">
+
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Lo Nuevo</h3>
+          <span>Ver productos →</span>
+        </div>
+
+      </a>
+
+
+      <a class="cat" href="ofertas/index.html">
+
+        <img
+          src="assets/ofertas.jpg"
+          alt="Ofertas">
+
+        <div>
+          <small>GARChÉZ BOUTIQUE</small>
+          <h3>Ofertas</h3>
+          <span>Ver productos →</span>
+        </div>
+
+      </a>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- BANNER -->
+  <!-- PRODUCTOS DESTACADOS -->
 
-<section class="banner">
+  <section class="section">
 
-  <div>
-    <h2>Estilo para cada momento.</h2>
-    <p>Descubre nuestras nuevas colecciones.</p>
-  </div>
+    <div class="title">
 
-  <a href="lo-nuevo/index.html" class="button">
-    DESCUBRIR LO NUEVO →
-  </a>
+      <h2>Productos destacados</h2>
 
-</section>
+      <p>
+        Cuando agregues productos desde tu administrador,
+        aparecerán aquí.
+      </p>
 
+    </div>
 
-<!-- NEWSLETTER -->
+    <div id="featured" class="products"></div>
 
-<section class="newsletter">
+  </section>
 
-  <h2>Bienvenida a GarChéz Boutique</h2>
-
-  <p>
-    Moda, calzado y accesorios seleccionados para ti.
-  </p>
-
-  <a href="lo-nuevo/index.html" class="button">
-    VER COLECCIÓN
-  </a>
-
-</section>
+</main>
 
 
-<!-- FOOTER -->
+<!-- PIE DE PÁGINA -->
 
 <footer class="footer">
 
-  <div class="footer-grid">
+  <div class="foot">
 
     <div>
 
       <img
-        src="assets/logo.png"
         class="footer-logo"
+        src="assets/logo.png"
         alt="GarChéz Boutique">
 
       <p>
-        Moda, calzado y accesorios
-        con estilo propio.
+        Moda, calzado, accesorios y mucho más
+        para Nicaragua.
       </p>
 
     </div>
@@ -1050,40 +331,65 @@ a{
       <h3>Comprar</h3>
 
       <a href="damas/index.html">Damas</a><br>
+
       <a href="caballeros/index.html">Caballeros</a><br>
+
       <a href="calzado/index.html">Calzado</a><br>
-      <a href="bolsos/index.html">Bolsos</a>
+
+      <a href="bolsos/index.html">Bolsos</a><br>
+
+      <a href="gorras-sombreros/index.html">
+        Gorras y Sombreros
+      </a>
 
     </div>
 
 
     <div>
 
-      <h3>Categorías</h3>
+      <h3>Más categorías</h3>
+
+      <a href="relojes/index.html">Relojes</a><br>
 
       <a href="accesorios/index.html">Accesorios</a><br>
-      <a href="relojes/index.html">Relojes</a><br>
+
+      <a href="temporada/index.html">Temporada</a><br>
+
       <a href="hogar/index.html">Hogar</a><br>
-      <a href="temporada/index.html">Temporada</a>
+
+      <a href="lo-nuevo/index.html">Lo Nuevo</a><br>
+
+      <a href="ofertas/index.html">Ofertas</a>
 
     </div>
 
 
     <div>
 
-      <h3>Contacto</h3>
+      <h3>GarChéz Boutique</h3>
 
-      <p>📱 WhatsApp: 8796-1399</p>
-      <p>🇳🇮 Nicaragua</p>
-      <p>📍 Chinandega y El Viejo</p>
+      <p>
+        <b>Propietarios:</b><br>
+        Kevin Garcia<br>
+        Keyling Sanchez
+      </p>
+
+      <p>
+        📱 WhatsApp: 8796-1399<br>
+        📍 Chinandega y El Viejo,
+        🇳🇮 Nicaragua
+      </p>
 
     </div>
 
   </div>
 
 
-  <div class="footer-bottom">
-    © 2026 GarChéz Boutique · Nicaragua
+  <div class="bottom">
+
+    © 2026 GarChéz Boutique ·
+    Kevin Garcia & Keyling Sanchez
+
   </div>
 
 </footer>
@@ -1095,47 +401,145 @@ a{
   class="whatsapp"
   href="https://wa.me/50587961399"
   target="_blank"
-  aria-label="WhatsApp">
-  ☎
+  aria-label="Escribir por WhatsApp">
+
+  <svg
+    viewBox="0 0 32 32"
+    aria-hidden="true">
+
+    <path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.2 28.8l6.6-1.8A12.7 12.7 0 1 0 16 3.2Zm0 22.9c-2.1 0-4.1-.6-5.8-1.8l-.4-.3-3.9 1.1 1.1-3.8-.3-.4a10.2 10.2 0 1 1 9.3 5.2Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.9-1-3.1-1.8-4.3-4-.3-.5.3-.5.8-1.7.1-.3 0-.5-.1-.7-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.4 4.8 2.7 1.2 3.2 1 3.8.9.6-.1 1.8-.8 2-1.5.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/>
+
+  </svg>
+
 </a>
 
 
 <script>
 
-function comprar(producto){
+/* CARGAR PRODUCTOS */
 
-  const mensaje =
-    "Hola GarChéz Boutique 👋, estoy interesada en: "
-    + producto;
+async function loadProducts(){
 
-  const url =
-    "https://wa.me/50587961399?text="
-    + encodeURIComponent(mensaje);
+  const box =
+    document.getElementById('featured');
 
-  window.open(url,"_blank");
+  try{
+
+    const r =
+      await fetch('data/productos.json');
+
+    const data =
+      await r.json();
+
+    const items =
+      Array.isArray(data)
+      ? data.filter(
+          x => x.nombre && x.foto
+        )
+      : [];
+
+    if(!items.length){
+
+      box.innerHTML = `
+        <div
+          class="empty"
+          style="grid-column:1/-1">
+
+          Aquí aparecerán tus productos
+          destacados.
+
+        </div>
+      `;
+
+      return;
+
+    }
+
+    box.innerHTML =
+      items
+      .slice(0,4)
+      .map(p => `
+
+        <article class="product">
+
+          <div class="photo">
+
+            <img
+              src="${p.foto}"
+              alt="${p.nombre}">
+
+          </div>
+
+          <div class="info">
+
+            <h3>${p.nombre}</h3>
+
+            <div class="price">
+              ${p.precio || ''}
+            </div>
+
+            <a
+              class="buy"
+              target="_blank"
+              href="https://wa.me/50587961399?text=${encodeURIComponent(
+                'Hola GarChéz Boutique, quiero información sobre ' +
+                p.nombre
+              )}">
+
+              COMPRAR POR WHATSAPP
+
+            </a>
+
+          </div>
+
+        </article>
+
+      `)
+      .join('');
+
+  }catch(e){
+
+    box.innerHTML = `
+      <div
+        class="empty"
+        style="grid-column:1/-1">
+
+        Aquí aparecerán tus productos
+        destacados.
+
+      </div>
+    `;
+
+  }
 
 }
 
+loadProducts();
+
+
+/* BUSCADOR */
 
 document
-  .getElementById("searchInput")
-  .addEventListener("keydown",function(e){
+  .getElementById('search')
+  .addEventListener(
+    'keydown',
+    e => {
 
-    if(e.key==="Enter"){
+      if(
+        e.key === 'Enter' &&
+        e.target.value.trim()
+      ){
 
-      const texto=this.value.trim();
-
-      if(texto!==""){
-
-        window.location.href =
-          "lo-nuevo/index.html?buscar="
-          + encodeURIComponent(texto);
+        location.href =
+          'lo-nuevo/index.html?buscar=' +
+          encodeURIComponent(
+            e.target.value.trim()
+          );
 
       }
 
     }
-
-  });
+  );
 
 </script>
 
