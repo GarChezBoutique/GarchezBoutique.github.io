@@ -3,11 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Bolsos | GarChéz Boutique</title>
 
   <link rel="stylesheet" href="../assets/style.css">
 
   <style>
+    /* CORRECCIÓN DEL LOGO */
+    .header .logo img {
+      width: 120px !important;
+      height: auto !important;
+      max-width: 120px !important;
+      display: block !important;
+      object-fit: contain !important;
+    }
+
+    .header .logo {
+      display: flex;
+      align-items: center;
+    }
+
     .product {
       position: relative;
       overflow: hidden;
@@ -45,6 +60,12 @@
       color: #888;
       text-decoration: line-through;
       font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
     }
 
     .details {
@@ -97,48 +118,105 @@
   </div>
 
   <header class="header">
+
     <div class="logo">
       <a href="../index.html">
-        <img src="../logo.png." alt="GarChéz Boutique">
+        <img
+          src="../logo.png."
+          alt="GarChéz Boutique"
+        >
       </a>
     </div>
 
     <div class="search">
-      <input type="text" id="searchInput" placeholder="Buscar productos...">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Buscar productos..."
+      >
     </div>
 
     <div class="header-icons">
       <span>👤</span>
       <span>🛒</span>
     </div>
+
   </header>
 
   <nav class="nav">
+
     <a href="../index.html">Inicio</a>
-    <a href="../Damas/index.html">Damas</a>
-    <a href="../Caballeros/index.html">Caballeros</a>
-    <a href="../Calzado/index.html">Calzado</a>
-    <a href="index.html" class="active">Bolsos</a>
-    <a href="../Accesorios/index.html">Accesorios</a>
-    <a href="../Gorras%20y%20Sombreros/index.html">Gorras y Sombreros</a>
-    <a href="../Hogar/index.html">Hogar</a>
-    <a href="../Lo%20Nuevo/index.html">Lo Nuevo</a>
-    <a href="../Ofertas/index.html">Ofertas</a>
-    <a href="../Relojes/index.html">Relojes</a>
-    <a href="../Temporada/index.html">Temporada</a>
+
+    <a href="../Damas/index.html">
+      Damas
+    </a>
+
+    <a href="../Caballeros/index.html">
+      Caballeros
+    </a>
+
+    <a href="../Calzado/index.html">
+      Calzado
+    </a>
+
+    <a href="index.html" class="active">
+      Bolsos
+    </a>
+
+    <a href="../Accesorios/index.html">
+      Accesorios
+    </a>
+
+    <a href="../Gorras%20y%20Sombreros/index.html">
+      Gorras y Sombreros
+    </a>
+
+    <a href="../Hogar/index.html">
+      Hogar
+    </a>
+
+    <a href="../Lo%20Nuevo/index.html">
+      Lo Nuevo
+    </a>
+
+    <a href="../Ofertas/index.html">
+      Ofertas
+    </a>
+
+    <a href="../Relojes/index.html">
+      Relojes
+    </a>
+
+    <a href="../Temporada/index.html">
+      Temporada
+    </a>
+
   </nav>
 
   <main>
 
     <section class="category-header">
+
       <h1>Bolsos</h1>
-      <p>Descubre nuestros bolsos y complementos ✨</p>
+
+      <p>
+        Descubre nuestros bolsos y complementos ✨
+      </p>
+
     </section>
 
-    <section class="products" id="products">
-      <div class="empty" style="grid-column:1/-1">
+    <section
+      class="products"
+      id="products"
+    >
+
+      <div
+        class="empty"
+        style="grid-column:1/-1"
+      >
         Aquí aparecerán los productos de Bolsos.
       </div>
+
     </section>
 
   </main>
@@ -153,12 +231,19 @@
   </a>
 
   <footer>
-    <p>© 2026 GarChéz Boutique. Todos los derechos reservados.</p>
+
+    <p>
+      © 2026 GarChéz Boutique.
+      Todos los derechos reservados.
+    </p>
+
   </footer>
 
   <script>
 
-    const contenedor = document.getElementById("products");
+    const contenedor =
+      document.getElementById("products");
+
 
     function normalizarImagen(imagen) {
 
@@ -176,8 +261,11 @@
         return imagen;
       }
 
-      return "../" + imagen.replace(/^\.?\//, "");
+      return "../" +
+        imagen.replace(/^\.?\//, "");
+
     }
+
 
     function escapar(texto) {
 
@@ -187,86 +275,131 @@
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
+
     }
+
 
     function crearProducto(producto) {
 
-      const nombre = producto.nombre || "Bolso";
-      const precio = producto.precio || "";
-      const precioAnterior = producto.precio_anterior || "";
-      const color = producto.color || "";
-      const talla = producto.talla || "";
-      const descripcion = producto.descripcion || "";
-      const disponibilidad = producto.disponibilidad || "Disponible";
-      const oferta = producto.oferta === true;
+      const nombre =
+        producto.nombre || "Bolso";
+
+      const precio =
+        producto.precio || "";
+
+      const precioAnterior =
+        producto.precio_anterior || "";
+
+      const color =
+        producto.color || "";
+
+      const talla =
+        producto.talla || "";
+
+      const descripcion =
+        producto.descripcion || "";
+
+      const disponibilidad =
+        producto.disponibilidad || "Disponible";
+
+      const oferta =
+        producto.oferta === true;
+
 
       const imagenPrincipal =
         normalizarImagen(producto.imagen);
 
+
       let galeria = [];
 
+
       if (Array.isArray(producto.galeria)) {
-        galeria = producto.galeria
-          .filter(Boolean)
-          .map(normalizarImagen);
+
+        galeria =
+          producto.galeria
+            .filter(Boolean)
+            .map(normalizarImagen);
+
       }
+
 
       const imagenes = [
         imagenPrincipal,
         ...galeria
       ].filter(Boolean);
 
-      const tarjeta = document.createElement("div");
+
+      const tarjeta =
+        document.createElement("div");
 
       tarjeta.className = "product";
 
+
       let badges = "";
 
+
       if (oferta) {
+
         badges += `
           <span class="badge offer">
             OFERTA 🔥
           </span>
         `;
+
       }
 
+
       if (disponibilidad === "Agotado") {
+
         badges += `
           <span class="badge out">
             AGOTADO
           </span>
         `;
+
       }
+
 
       let detalles = "";
 
+
       if (color) {
+
         detalles += `
           <div>
             🎨 <strong>Color:</strong>
             ${escapar(color)}
           </div>
         `;
+
       }
 
+
       if (talla) {
+
         detalles += `
           <div>
             📏 <strong>Talla:</strong>
             ${escapar(talla)}
           </div>
         `;
+
       }
+
 
       let precioHTML = "";
 
+
       if (precioAnterior) {
+
         precioHTML += `
           <div class="old-price">
             ${escapar(precioAnterior)}
           </div>
         `;
+
       }
+
 
       precioHTML += `
         <div class="price">
@@ -274,7 +407,9 @@
         </div>
       `;
 
+
       let boton = "";
+
 
       if (disponibilidad === "Agotado") {
 
@@ -287,19 +422,31 @@
       } else {
 
         let mensaje =
-          `Hola 👋, me interesa este producto de GarChéz Boutique: ${nombre}`;
+          "Hola 👋, me interesa este producto " +
+          "de GarChéz Boutique: " +
+          nombre;
+
 
         if (color) {
-          mensaje += ` | Color: ${color}`;
+
+          mensaje +=
+            " | Color: " + color;
+
         }
 
+
         if (talla) {
-          mensaje += ` | Talla: ${talla}`;
+
+          mensaje +=
+            " | Talla: " + talla;
+
         }
+
 
         const whatsapp =
           "https://wa.me/50587961399?text=" +
           encodeURIComponent(mensaje);
+
 
         boton = `
           <a
@@ -310,7 +457,9 @@
             Comprar por WhatsApp 💬
           </a>
         `;
+
       }
+
 
       tarjeta.innerHTML = `
 
@@ -341,6 +490,7 @@
 
         </div>
 
+
         ${
           imagenes.length > 1
 
@@ -354,9 +504,11 @@
                   alt="${escapar(nombre)}"
                   class="gallery-image"
                   data-image="${img}"
-                  ${i === 0
+                  ${
+                    i === 0
                     ? 'style="border:2px solid #111"'
-                    : ""}
+                    : ""
+                  }
                 >
 
               `).join("")}
@@ -366,6 +518,7 @@
 
           : ""
         }
+
 
         <div class="info">
 
@@ -402,82 +555,116 @@
           ${boton}
 
         </div>
+
       `;
 
+
       const imagenGrande =
-        tarjeta.querySelector(".main-product-image");
+        tarjeta.querySelector(
+          ".main-product-image"
+        );
+
 
       const miniaturas =
-        tarjeta.querySelectorAll(".gallery-image");
+        tarjeta.querySelectorAll(
+          ".gallery-image"
+        );
+
 
       miniaturas.forEach(miniatura => {
 
-        miniatura.addEventListener("click", () => {
+        miniatura.addEventListener(
+          "click",
+          () => {
 
-          if (imagenGrande) {
-            imagenGrande.src =
-              miniatura.getAttribute("data-image");
+            if (imagenGrande) {
+
+              imagenGrande.src =
+                miniatura.getAttribute(
+                  "data-image"
+                );
+
+            }
+
+
+            miniaturas.forEach(img => {
+
+              img.style.border =
+                "1px solid #ddd";
+
+            });
+
+
+            miniatura.style.border =
+              "2px solid #111";
+
           }
-
-          miniaturas.forEach(img => {
-            img.style.border = "1px solid #ddd";
-          });
-
-          miniatura.style.border =
-            "2px solid #111";
-
-        });
+        );
 
       });
 
+
       return tarjeta;
+
     }
 
+
     let productos = [];
+
 
     fetch("../data/bolsos.json")
 
       .then(response => {
 
         if (!response.ok) {
+
           throw new Error(
-            "No se encontró el archivo de productos."
+            "No se encontró el archivo."
           );
+
         }
 
         return response.json();
 
       })
 
+
       .then(data => {
 
         productos =
-          Array.isArray(data) ? data : [];
+          Array.isArray(data)
+          ? data
+          : [];
 
         mostrarProductos(productos);
 
       })
+
 
       .catch(error => {
 
         console.error(error);
 
         contenedor.innerHTML = `
+
           <div
             class="empty"
             style="grid-column:1/-1"
           >
             Aquí aparecerán los productos de Bolsos.
           </div>
+
         `;
 
       });
+
 
     function mostrarProductos(lista) {
 
       if (!lista.length) {
 
         contenedor.innerHTML = `
+
           <div
             class="empty"
             style="grid-column:1/-1"
@@ -487,12 +674,16 @@
             Muy pronto encontrarás bolsos,
             carteras y mucho más. ✨
           </div>
+
         `;
 
         return;
+
       }
 
+
       contenedor.innerHTML = "";
+
 
       lista.forEach(producto => {
 
@@ -501,37 +692,56 @@
         );
 
       });
+
     }
+
 
     document
       .getElementById("searchInput")
-      .addEventListener("input", function () {
+      .addEventListener(
+        "input",
+        function () {
 
-        const texto =
-          this.value.toLowerCase().trim();
+          const texto =
+            this.value
+              .toLowerCase()
+              .trim();
 
-        if (!texto) {
-          mostrarProductos(productos);
-          return;
+
+          if (!texto) {
+
+            mostrarProductos(productos);
+
+            return;
+
+          }
+
+
+          const filtrados =
+            productos.filter(producto => {
+
+              const contenido = `
+
+                ${producto.nombre || ""}
+
+                ${producto.color || ""}
+
+                ${producto.talla || ""}
+
+                ${producto.descripcion || ""}
+
+              `.toLowerCase();
+
+
+              return contenido.includes(texto);
+
+            });
+
+
+          mostrarProductos(filtrados);
+
         }
-
-        const filtrados =
-          productos.filter(producto => {
-
-            const contenido = `
-              ${producto.nombre || ""}
-              ${producto.color || ""}
-              ${producto.talla || ""}
-              ${producto.descripcion || ""}
-            `.toLowerCase();
-
-            return contenido.includes(texto);
-
-          });
-
-        mostrarProductos(filtrados);
-
-      });
+      );
 
   </script>
 
