@@ -1,6 +1,7 @@
 media: assets
 
 content:
+
   - name: damas
     label: Damas
     type: file
@@ -57,55 +58,486 @@ content:
         label: Producto en oferta
         type: boolean
 
+
   - name: caballeros
     label: Caballeros
-    type: collection
-    path: Caballeros
+    type: file
+    path: data/caballeros.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: calzado
     label: Calzado
-    type: collection
-    path: Calzado
+    type: file
+    path: data/calzado.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: bolsos
     label: Bolsos
-    type: collection
-    path: Bolsos
+    type: file
+    path: data/bolsos.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: accesorios
     label: Accesorios
-    type: collection
-    path: Accesorios
+    type: file
+    path: data/accesorios.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: gorras_sombreros
     label: Gorras y Sombreros
-    type: collection
-    path: Gorras y Sombreros
+    type: file
+    path: data/gorras-sombreros.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: hogar
     label: Hogar
-    type: collection
-    path: Hogar
+    type: file
+    path: data/hogar.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: lo_nuevo
     label: Lo Nuevo
-    type: collection
-    path: Lo Nuevo
+    type: file
+    path: data/lo-nuevo.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: ofertas
     label: Ofertas
-    type: collection
-    path: Ofertas
+    type: file
+    path: data/ofertas.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: relojes
     label: Relojes
-    type: collection
-    path: Relojes
+    type: file
+    path: data/relojes.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: temporada
     label: Temporada
-    type: collection
-    path: Temporada
+    type: file
+    path: data/temporada.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: string
+        required: true
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+      - name: color
+        label: Color
+        type: string
+      - name: talla
+        label: Talla
+        type: string
+      - name: imagen
+        label: Imagen principal
+        type: image
+        required: true
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
+
 
   - name: articulos
     label: Artículos
