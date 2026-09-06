@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GarChéz Boutique</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:#171717;background:#fff}
+button{font-family:inherit;cursor:pointer}
+a{text-decoration:none;color:inherit}
+
+.top{
+background:#181818;color:#fff;text-align:center;padding:9px;
+font-size:12px;letter-spacing:1.5px
+}
+
+header{
+height:82px;display:flex;align-items:center;justify-content:space-between;
+padding:0 6%;border-bottom:1px solid #eee;background:#fff;
+position:sticky;top:0;z-index:20
+}
+
+.logo{width:145px;height:auto;display:block}
+
+nav{display:flex;gap:28px;align-items:center}
+nav button{
+border:0;background:none;font-size:13px;font-weight:600;
+letter-spacing:.5px;color:#222
+}
+nav button:hover{opacity:.55}
+
+.hero{
+min-height:590px;display:grid;grid-template-columns:43% 57%;
+background:#f4eceb;overflow:hidden
+}
+
+.hero-text{
+display:flex;flex-direction:column;justify-content:center;
+padding:60px 10% 60px 12%
+}
+.eyebrow{
+font-size:11px;letter-spacing:3px;text-transform:uppercase;
+margin-bottom:18px;color:#777
+}
+h1{
+font-family:'Playfair Display',serif;font-size:64px;
+line-height:1.02;font-weight:600;margin-bottom:22px
+}
+.hero-text p{font-size:16px;line-height:1.7;color:#555;max-width:430px;margin-bottom:30px}
+
+.primary{
+display:inline-block;width:max-content;background:#191919;color:#fff;
+border:0;padding:15px 29px;font-size:13px;letter-spacing:1px
+}
+.primary:hover{background:#333}
+
+.hero-image{
+min-height:590px;
+background:
+linear-gradient(90deg,rgba(244,236,235,.15),transparent),
+url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=85')
+center/cover
+}
+
+.section{padding:75px 6%}
+.section-head{text-align:center;margin-bottom:38px}
+.section-head span{
+font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#999
+}
+.section-head h2{
+font-family:'Playfair Display',serif;font-size:40px;margin-top:8px
+}
+
+.categories{
+display:grid;grid-template-columns:repeat(4,1fr);gap:18px
+}
+.category{
+height:330px;border:0;position:relative;overflow:hidden;
+background-size:cover;background-position:center;color:#fff
+}
+.category:after{
+content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.65))
+}
+.category-content{position:absolute;z-index:2;bottom:25px;left:25px}
+.category-content small{font-size:10px;letter-spacing:2px}
+.category-content h3{
+font-family:'Playfair Display',serif;font-size:28px;margin:5px 0 12px
+}
+.category-content strong{font-size:12px;letter-spacing:1px}
+
+.cat-woman{background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80')}
+.cat-shoes{background-image:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80')}
+.cat-access{background-image:url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80')}
+.cat-new{background-image:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80')}
+
+.products{
+display:grid;grid-template-columns:repeat(4,1fr);gap:22px
+}
+.product{background:#fafafa;padding-bottom:20px}
+.product-img{
+height:310px;background-size:cover;background-position:center
+}
+.product-info{padding:16px}
+.product-info h3{font-size:15px;font-weight:600;margin-bottom:7px}
+.price{font-size:14px}
+.old{text-decoration:line-through;color:#aaa;margin-right:8px}
+.buy{
+margin-top:14px;width:100%;padding:11px;background:#191919;
+color:white;border:0;font-size:12px;letter-spacing:.7px
+}
+
+.benefits{
+background:#191919;color:#fff;display:grid;
+grid-template-columns:repeat(3,1fr);text-align:center
+}
+.benefit{padding:27px 15px;border-right:1px solid #444}
+.benefit:last-child{border:0}
+.benefit b{display:block;font-size:13px;margin-bottom:5px}
+.benefit span{font-size:11px;color:#bbb}
+
+.newsletter{
+background:#f5eeee;text-align:center;padding:65px 20px
+}
+.newsletter h2{font-family:'Playfair Display',serif;font-size:36px;margin-bottom:10px}
+.newsletter p{color:#666;margin-bottom:24px}
+
+footer{
+background:#fff;padding:50px 6%;border-top:1px solid #eee;
+display:flex;justify-content:space-between;gap:30px
+}
+footer img{width:130px}
+footer p{font-size:12px;color:#777;line-height:1.7;margin-top:12px}
+.footer-title{font-weight:700;font-size:13px;margin-bottom:13px}
+
+.whatsapp{
+position:fixed;right:22px;bottom:22px;width:57px;height:57px;
+border-radius:50%;background:#25D366;color:#fff;z-index:50;
+display:flex;align-items:center;justify-content:center;
+font-size:25px;font-weight:bold;box-shadow:0 5px 20px #0002
+}
+
+/* VENTANA DE CATEGORÍA */
+.modal{
+display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);
+z-index:100;padding:35px 5%;overflow:auto
+}
+.modal-box{
+background:#fff;max-width:1100px;margin:auto;min-height:80vh;
+padding:35px
+}
+.modal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+.modal-top h2{font-family:'Playfair Display',serif;font-size:36px}
+.close{border:0;background:none;font-size:28px}
+
+@media(max-width:850px){
+header{padding:0 4%;height:70px}
+.logo{width:115px}
+nav{gap:12px}
+nav button{font-size:10px}
+.hero{grid-template-columns:1fr}
+.hero-text{padding:55px 8%}
+.hero-image{min-height:420px}
+h1{font-size:48px}
+.categories,.products{grid-template-columns:repeat(2,1fr)}
+.category{height:270px}
+.benefits{grid-template-columns:1fr}
+.benefit{border-right:0;border-bottom:1px solid #444}
+footer{flex-direction:column}
+}
+
+@media(max-width:500px){
+nav button:nth-child(n+4){display:none}
+.hero-image{min-height:330px}
+.categories,.products{grid-template-columns:1fr}
+.section{padding:55px 5%}
+.category{height:330px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+🚚 ENVÍO GRATIS 📍 CHINANDEGA Y EL VIEJO 🇳🇮
+</div>
+
+<header>
+<img class="logo" src="logo-garchez.png" alt="GarChéz Boutique">
+
+<nav>
+<button onclick="inicio()">Inicio</button>
+<button onclick="openCategory('mujer')">Ropa de Mujer</button>
+<button onclick="openCategory('calzado')">Calzado</button>
+<button onclick="openCategory('accesorios')">Accesorios</button>
+<button onclick="openCategory('nuevo')">Lo Nuevo</button>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-text">
+<div class="eyebrow">GarChéz Boutique</div>
+<h1>Estilo que habla por ti.</h1>
+<p>
+Descubre prendas, calzado y accesorios seleccionados
+para quienes convierten cada look en una declaración de estilo.
+</p>
+<button class="primary" onclick="openCategory('nuevo')">
+COMPRAR AHORA
+</button>
+</div>
+<div class="hero-image"></div>
+</section>
+
+<section class="section">
+<div class="section-head">
+<span>Descubre tu estilo</span>
+<h2>Compra por categoría</h2>
+</div>
+
+<div class="categories">
+
+<button class="category cat-woman" onclick="openCategory('mujer')">
+<div class="category-content">
+<small>COLECCIÓN</small>
+<h3>Ropa de Mujer</h3>
+<strong>VER COLECCIÓN →</strong>
+</div>
+</button>
+
+<button class="category cat-shoes" onclick="openCategory('calzado')">
+<div class="category-content">
+<small>SELECCIÓN</small>
+<h3>Calzado</h3>
+<strong>VER COLECCIÓN →</strong>
+</div>
+</button>
+
+<button class="category cat-access" onclick="openCategory('accesorios')">
+<div class="category-content">
+<small>DETALLES</small>
+<h3>Accesorios</h3>
+<strong>VER COLECCIÓN →</strong>
+</div>
+</button>
+
+<button class="category cat-new" onclick="openCategory('nuevo')">
+<div class="category-content">
+<small>RECIÉN LLEGADO</small>
+<h3>Lo Nuevo</h3>
+<strong>VER COLECCIÓN →</strong>
+</div>
+</button>
+
+</div>
+</section>
+
+<section class="section" id="destacados">
+<div class="section-head">
+<span>Selección GarChéz</span>
+<h2>Favoritos</h2>
+</div>
+
+<div class="products">
+
+<div class="product">
+<div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1564257577054-6e5a9c4f0d8a?auto=format&fit=crop&w=700&q=80')"></div>
+<div class="product-info">
+<h3>Blusa Elegante</h3>
+<div class="price">C$ 850</div>
+<button class="buy" onclick="whatsapp('Blusa Elegante')">COMPRAR POR WHATSAPP</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80')"></div>
+<div class="product-info">
+<h3>Bolso Clásico</h3>
+<div class="price">C$ 1,200</div>
+<button class="buy" onclick="whatsapp('Bolso Clásico')">COMPRAR POR WHATSAPP</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80')"></div>
+<div class="product-info">
+<h3>Tenis Urbanos</h3>
+<div class="price">C$ 1,500</div>
+<button class="buy" onclick="whatsapp('Tenis Urbanos')">COMPRAR POR WHATSAPP</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=700&q=80')"></div>
+<div class="product-info">
+<h3>Vestido Boutique</h3>
+<div class="price">C$ 1,350</div>
+<button class="buy" onclick="whatsapp('Vestido Boutique')">COMPRAR POR WHATSAPP</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="benefits">
+<div class="benefit">
+<b>🚚 Envíos a toda 🇳🇮 Nicaragua</b>
+<span>Recibe tus pedidos donde estés.</span>
+</div>
+<div class="benefit">
+<b>📍 Envío GRATIS</b>
+<span>Chinandega y El Viejo.</span>
+</div>
+<div class="benefit">
+<b>💬 Compra fácil</b>
+<span>Haz tu pedido directamente por WhatsApp.</span>
+</div>
+</section>
+
+<section class="newsletter">
+<h2>Tu próximo look comienza aquí.</h2>
+<p>Descubre nuestras nuevas colecciones y piezas seleccionadas.</p>
+<button class="primary" onclick="openCategory('nuevo')">VER LO NUEVO</button>
+</section>
+
+<footer>
+<div>
+<img src="logo-garchez.png" alt="GarChéz Boutique">
+<p>Moda, calzado y accesorios<br>con estilo propio.</p>
+</div>
+
+<div>
+<div class="footer-title">Comprar</div>
+<p>Ropa de Mujer<br>Calzado<br>Accesorios<br>Lo Nuevo</p>
+</div>
+
+<div>
+<div class="footer-title">Contacto</div>
+<p>WhatsApp: 8796-1399<br>🇳🇮 Nicaragua</p>
+</div>
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/50587961399?text=Hola%20GarCh%C3%A9z%20Boutique%2C%20quiero%20hacer%20una%20consulta."
+target="_blank">◔</a>
+
+<div class="modal" id="modal">
+<div class="modal-box">
+<div class="modal-top">
+<h2 id="modalTitle"></h2>
+<button class="close" onclick="closeModal()">×</button>
+</div>
+<div class="products" id="modalProducts"></div>
+</div>
+</div>
+
+<script>
+const productos={
+mujer:[
+['Vestido Boutique','C$ 1,350','https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=700&q=80'],
+['Blusa Elegante','C$ 850','https://images.unsplash.com/photo-1564257577054-6e5a9c4f0d8a?auto=format&fit=crop&w=700&q=80'],
+['Look Casual','C$ 1,100','https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80']
+],
+calzado:[
+['Tenis Urbanos','C$ 1,500','https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80'],
+['Calzado Elegante','C$ 1,400','https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80']
+],
+accesorios:[
+['Bolso Clásico','C$ 1,200','https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80'],
+['Reloj Minimalista','C$ 950','https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80']
+],
+nuevo:[
+['Nueva Blusa','C$ 900','https://images.unsplash.com/photo-1564257577054-6e5a9c4f0d8a?auto=format&fit=crop&w=700&q=80'],
+['Nuevo Bolso','C$ 1,250','https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80'],
+['Nuevo Calzado','C$ 1,600','https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80']
+]
+};
+
+const nombres={
+mujer:'Ropa de Mujer',
+calzado:'Calzado',
+accesorios:'Accesorios',
+nuevo:'Lo Nuevo'
+};
+
+function openCategory(cat){
+document.getElementById('modal').style.display='block';
+document.getElementById('modalTitle').textContent=nombres[cat];
+
+document.getElementById('modalProducts').innerHTML=
+productos[cat].map(p=>`
+<div class="product">
+<div class="product-img" style="background-image:url('${p[2]}')"></div>
+<div class="product-info">
+<h3>${p[0]}</h3>
+<div class="price">${p[1]}</div>
+<button class="buy" onclick="whatsapp('${p[0]}')">
+COMPRAR POR WHATSAPP
+</button>
+</div>
+</div>
+`).join('');
+}
+
+function closeModal(){
+document.getElementById('modal').style.display='none';
+}
+
+function inicio(){
+window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function whatsapp(producto){
+const mensaje='Hola GarChéz Boutique 👋, quiero comprar: '+producto;
+window.open('https://wa.me/50587961399?text='+encodeURIComponent(mensaje),'_blank');
+}
+
+window.onclick=function(e){
+if(e.target===document.getElementById('modal')) closeModal();
+}
+</script>
+
+</body>
+</html>
