@@ -4,13 +4,18 @@
   --black:#171515;
   --pink:#f3b7c0;
   --cream:#fbf7f5;
+  --white:#ffffff;
   --line:#e7ddda;
   --muted:#706967;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
@@ -24,16 +29,23 @@ a{
   color:inherit;
 }
 
+
+/* BARRA SUPERIOR */
+
 .topbar{
   background:var(--black);
-  color:#fff;
+  color:white;
   display:flex;
   justify-content:center;
+  align-items:center;
   gap:60px;
   padding:9px 5%;
   font-size:12px;
   flex-wrap:wrap;
 }
+
+
+/* ENCABEZADO */
 
 .header{
   background:#fffaf8;
@@ -57,10 +69,13 @@ a{
   object-fit:contain;
 }
 
+
+/* BUSCADOR */
+
 .search{
   height:46px;
   border:1px solid #d8d0cd;
-  background:#fff;
+  background:white;
   border-radius:8px;
   display:flex;
   align-items:center;
@@ -80,6 +95,9 @@ a{
   background:transparent;
 }
 
+
+/* ACCIONES */
+
 .actions{
   display:flex;
   justify-content:flex-end;
@@ -98,11 +116,14 @@ a{
   margin-bottom:3px;
 }
 
+
+/* MENÚ */
+
 .nav{
   display:flex;
   justify-content:center;
   overflow-x:auto;
-  background:#fff;
+  background:white;
   border-top:1px solid var(--line);
 }
 
@@ -110,6 +131,7 @@ a{
   padding:15px 16px;
   white-space:nowrap;
   font-size:13px;
+  transition:.2s;
 }
 
 .nav a:hover,
@@ -117,11 +139,22 @@ a{
   background:var(--pink);
 }
 
+
+/* PORTADA */
+
+.hero{
+  width:100%;
+  overflow:hidden;
+}
+
 .hero img{
   width:100%;
   display:block;
   height:auto;
 }
+
+
+/* SECCIONES */
 
 .section{
   max-width:1400px;
@@ -146,6 +179,9 @@ a{
   color:var(--muted);
   margin:9px 0 0;
 }
+
+
+/* CATEGORÍAS */
 
 .categories{
   display:grid;
@@ -173,11 +209,14 @@ a{
   transform:scale(1.04);
 }
 
-.cat:after{
+.cat::after{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(transparent 35%,rgba(0,0,0,.72));
+  background:linear-gradient(
+    transparent 35%,
+    rgba(0,0,0,.72)
+  );
 }
 
 .cat div{
@@ -185,7 +224,7 @@ a{
   z-index:1;
   left:20px;
   bottom:18px;
-  color:#fff;
+  color:white;
 }
 
 .cat h3{
@@ -198,6 +237,9 @@ a{
   letter-spacing:1.5px;
 }
 
+
+/* PRODUCTOS */
+
 .products{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -205,7 +247,7 @@ a{
 }
 
 .product{
-  background:#fff;
+  background:white;
   border:1px solid var(--line);
 }
 
@@ -238,22 +280,34 @@ a{
   margin-top:13px;
   text-align:center;
   background:var(--black);
-  color:#fff;
+  color:white;
   padding:11px;
   font-size:12px;
+  transition:.2s;
 }
 
+.buy:hover{
+  background:var(--pink);
+  color:var(--black);
+}
+
+
+/* SIN PRODUCTOS */
+
 .empty{
-  background:#fff;
+  background:white;
   border:1px dashed #d8ceca;
   text-align:center;
   padding:45px 20px;
   color:var(--muted);
 }
 
+
+/* PIE DE PÁGINA */
+
 .footer{
   background:var(--black);
-  color:#fff;
+  color:white;
   padding:55px 5% 28px;
 }
 
@@ -267,7 +321,7 @@ a{
 
 .footer-logo{
   width:180px;
-  background:#fff;
+  background:white;
   padding:7px;
 }
 
@@ -282,6 +336,14 @@ a{
   line-height:1.9;
 }
 
+.footer a{
+  display:block;
+}
+
+.footer a:hover{
+  color:var(--pink);
+}
+
 .bottom{
   border-top:1px solid #3b3735;
   margin-top:35px;
@@ -290,6 +352,9 @@ a{
   color:#888;
   font-size:11px;
 }
+
+
+/* WHATSAPP */
 
 .whatsapp{
   position:fixed;
@@ -308,10 +373,14 @@ a{
 .whatsapp svg{
   width:31px;
   height:31px;
-  fill:#fff;
+  fill:white;
 }
 
+
+/* TABLET */
+
 @media(max-width:1000px){
+
   .head{
     grid-template-columns:1fr;
     justify-items:center;
@@ -329,12 +398,18 @@ a{
   .foot{
     grid-template-columns:repeat(2,1fr);
   }
+
 }
 
+
+/* CELULAR */
+
 @media(max-width:600px){
+
   .topbar{
     gap:15px;
     font-size:10px;
+    text-align:center;
   }
 
   .logo{
@@ -358,4 +433,10 @@ a{
   .section{
     padding:45px 5%;
   }
+
+  .hero img{
+    min-height:240px;
+    object-fit:cover;
+  }
+
 }
