@@ -3,8 +3,23 @@ media: assets
 content:
   - name: damas
     label: Damas
-    type: collection
-    path: Damas
+    type: file
+    path: data/damas.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre
+        type: string
+        required: true
+
+      - name: precio
+        label: Precio
+        type: string
+
+      - name: imagen
+        label: Imagen
+        type: image
 
   - name: caballeros
     label: Caballeros
