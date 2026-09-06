@@ -1,0 +1,80 @@
+media: assets
+
+content:
+  - name: damas
+    label: Damas
+    type: collection
+    path: Damas
+
+  - name: caballeros
+    label: Caballeros
+    type: collection
+    path: Caballeros
+
+  - name: calzado
+    label: Calzado
+    type: collection
+    path: Calzado
+
+  - name: bolsos
+    label: Bolsos
+    type: collection
+    path: Bolsos
+
+  - name: accesorios
+    label: Accesorios
+    type: collection
+    path: Accesorios
+
+  - name: gorras_sombreros
+    label: Gorras y Sombreros
+    type: collection
+    path: Gorras y Sombreros
+
+  - name: hogar
+    label: Hogar
+    type: collection
+    path: Hogar
+
+  - name: lo_nuevo
+    label: Lo Nuevo
+    type: collection
+    path: Lo Nuevo
+
+  - name: ofertas
+    label: Ofertas
+    type: collection
+    path: Ofertas
+
+  - name: relojes
+    label: Relojes
+    type: collection
+    path: Relojes
+
+  - name: temporada
+    label: Temporada
+    type: collection
+    path: Temporada
+
+  - name: articulos
+    label: Artículos
+    type: collection
+    path: Articulos
+    filename: "{primary}.md"
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+
+      - name: image
+        label: Imagen
+        type: image
+
+      - name: date
+        label: Fecha
+        type: date
+
+      - name: body
+        label: Contenido
+        type: rich-text
