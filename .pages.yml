@@ -9,17 +9,53 @@ content:
     list: true
     fields:
       - name: nombre
-        label: Nombre
+        label: Nombre del producto
         type: string
         required: true
 
       - name: precio
         label: Precio
         type: string
+        required: true
+
+      - name: precio_anterior
+        label: Precio anterior
+        type: string
+
+      - name: color
+        label: Color
+        type: string
+
+      - name: talla
+        label: Talla
+        type: string
 
       - name: imagen
-        label: Imagen
+        label: Imagen principal
         type: image
+        required: true
+
+      - name: galeria
+        label: Fotos adicionales
+        type: image
+        list:
+          max: 5
+
+      - name: descripcion
+        label: Descripción
+        type: text
+
+      - name: disponibilidad
+        label: Disponibilidad
+        type: select
+        options:
+          values:
+            - Disponible
+            - Agotado
+
+      - name: oferta
+        label: Producto en oferta
+        type: boolean
 
   - name: caballeros
     label: Caballeros
