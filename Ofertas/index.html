@@ -1,327 +1,364 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ofertas | GarChéz Boutique</title>
-  <link rel="stylesheet" href="../assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ofertas | GarChéz Boutique</title>
+<link rel="stylesheet" href="../assets/style.css">
 
-  <style>
-    .gc-product { position: relative; }
-
-    .gc-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin: 8px 0;
-    }
-
-    .gc-badge {
-      display: inline-block;
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 700;
-      background: #111;
-      color: #fff;
-    }
-
-    .gc-badge.offer { background: #d71920; }
-    .gc-badge.out { background: #777; }
-
-    .gc-old-price {
-      text-decoration: line-through;
-      opacity: .6;
-      margin-right: 7px;
-    }
-
-    .gc-details {
-      padding: 10px 0;
-      line-height: 1.6;
-    }
-
-    .gc-description {
-      margin-top: 8px;
-      opacity: .85;
-    }
-
-    .gc-gallery {
-      display: flex;
-      gap: 7px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-
-    .gc-gallery img {
-      width: 65px;
-      height: 65px;
-      object-fit: cover;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .gc-main-photo {
-      width: 100%;
-      display: block;
-    }
-
-    .gc-buy-disabled {
-      opacity: .55;
-      pointer-events: none;
-    }
-  </style>
+<style>
+.gc-products {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.gc-product {
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  position:relative;
+}
+.gc-product-image {
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  display:block;
+  cursor:pointer;
+}
+.gc-product-info {
+  padding:15px;
+}
+.gc-product-name {
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+.gc-price {
+  font-size:20px;
+  font-weight:bold;
+}
+.gc-old-price {
+  text-decoration:line-through;
+  color:#888;
+  margin-right:8px;
+}
+.gc-badge {
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#000;
+  color:#fff;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:13px;
+}
+.gc-gallery {
+  display:flex;
+  gap:6px;
+  padding:10px 15px 0;
+  overflow-x:auto;
+}
+.gc-gallery img {
+  width:55px;
+  height:55px;
+  object-fit:cover;
+  border-radius:7px;
+  cursor:pointer;
+}
+.gc-buy {
+  display:block;
+  margin-top:12px;
+  padding:10px;
+  text-align:center;
+  background:#25D366;
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.gc-unavailable {
+  color:#b00020;
+  font-weight:bold;
+  margin-top:8px;
+}
+.gc-empty {
+  text-align:center;
+  padding:50px 20px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="topbar">
-    <span>🚚 Envíos a toda 🇳🇮 Nicaragua</span>
-    <span>🚚 Envío GRATIS 📍 Chinandega y El Viejo 🇳🇮</span>
-    <span>🛡️ Compra segura</span>
+<div class="topbar">
+  <span>🚚 Envíos a toda 🇳🇮 Nicaragua</span>
+  <span>🚚 Envío GRATIS 📍 Chinandega y El Viejo 🇳🇮</span>
+  <span>🛡️ Compra segura</span>
+</div>
+
+<header class="header">
+  <div class="head">
+    <a href="../index.html">
+      <img src="../assets/LOGO.jpeg" class="logo" alt="GarChéz Boutique">
+    </a>
+
+    <div class="search">
+      <span>⌕</span>
+      <input type="search" placeholder="¿Qué estás buscando?" id="search">
+    </div>
+
+    <div class="actions">
+      <div class="action">
+        <b>♙</b>
+        <span>Mi cuenta</span>
+      </div>
+
+      <div class="action">
+        <b>🛒</b>
+        <span>Carrito</span>
+      </div>
+    </div>
   </div>
+</header>
 
-  <header class="header">
-    <div class="head">
-      <a href="../index.html">
-        <img src="../assets/LOGO.jpeg" class="logo" alt="GarChéz Boutique">
-      </a>
+<nav class="nav">
+  <a href="../index.html">Inicio</a>
+  <a href="../Damas/index.html">Damas</a>
+  <a href="../Caballeros/index.html">Caballeros</a>
+  <a href="../Calzado/index.html">Calzado</a>
+  <a href="../Bolsos/index.html">Bolsos</a>
+  <a href="../Accesorios/index.html">Accesorios</a>
+  <a href="../Gorras%20y%20Sombreros/index.html">Gorras y Sombreros</a>
+  <a href="../Hogar/index.html">Hogar</a>
+  <a href="../Lo%20Nuevo/index.html">Lo Nuevo</a>
+  <a href="../Ofertas/index.html">Ofertas</a>
+  <a href="../Relojes/index.html">Relojes</a>
+  <a href="../Temporada/index.html">Temporada</a>
+</nav>
 
-      <div class="search">
-        <span>⌕</span>
-        <input type="search" placeholder="¿Qué estás buscando?" id="search">
-      </div>
+<main>
+  <section class="section">
+    <h1 class="title">Ofertas</h1>
 
-      <div class="actions">
-        <span>👤</span>
-        <span>🛒</span>
-      </div>
-    </div>
-  </header>
-
-  <nav class="nav">
-    <a href="../Damas/index.html">Damas</a>
-    <a href="../Caballeros/index.html">Caballeros</a>
-    <a href="../Calzado/index.html">Calzado</a>
-    <a href="../Bolsos/index.html">Bolsos</a>
-    <a href="../Accesorios/index.html">Accesorios</a>
-    <a href="../Gorras%20y%20Sombreros/index.html">Gorras y Sombreros</a>
-    <a href="../Hogar/index.html">Hogar</a>
-    <a href="../Lo%20Nuevo/index.html">Lo Nuevo</a>
-    <a href="../Ofertas/index.html">Ofertas</a>
-    <a href="../Relojes/index.html">Relojes</a>
-    <a href="../Temporada/index.html">Temporada</a>
-  </nav>
-
-  <main class="section">
-    <h1 class="title">Ofertas 🔥</h1>
-
-    <div class="products" id="products">
-      <div class="empty" style="grid-column:1/-1">
-        Aquí aparecerán nuestros productos en oferta.
-        <br><br>
-        ¡Aprovecha los precios especiales! 🛍️
+    <div id="products" class="gc-products">
+      <div class="gc-empty">
+        <h2>Cargando productos...</h2>
       </div>
     </div>
-  </main>
+  </section>
+</main>
 
-  <footer class="footer">
+<footer class="footer">
+  <div class="foot">
+
+    <div>
+      <img src="../assets/LOGO.jpeg" class="logo" alt="GarChéz Boutique">
+      <p>Moda, calzado, accesorios y mucho más para Nicaragua 🇳🇮.</p>
+    </div>
+
+    <div>
+      <h3>Comprar</h3>
+      <a href="../Damas/index.html">Damas</a>
+      <a href="../Caballeros/index.html">Caballeros</a>
+      <a href="../Calzado/index.html">Calzado</a>
+      <a href="../Bolsos/index.html">Bolsos</a>
+    </div>
+
+    <div>
+      <h3>Más categorías</h3>
+      <a href="../Accesorios/index.html">Accesorios</a>
+      <a href="../Relojes/index.html">Relojes</a>
+      <a href="../Lo%20Nuevo/index.html">Lo Nuevo</a>
+      <a href="../Ofertas/index.html">Ofertas</a>
+    </div>
+
     <div>
       <h3>GarChéz Boutique</h3>
-      <p>Moda, accesorios y estilo para ti.</p>
+      <p>
+        <strong>Propietarios:</strong><br>
+        Kevin Garcia<br>
+        Keyling Sanchez
+      </p>
+
+      <p>
+        📱 WhatsApp:
+        <a href="https://wa.me/50587961399" target="_blank">
+          +505 8796-1399
+        </a>
+        <br>
+        📍 Chinandega y El Viejo, 🇳🇮 Nicaragua
+      </p>
     </div>
 
-    <div>
-      <h3>Información</h3>
-      <p>Envíos a toda Nicaragua 🇳🇮</p>
-      <p>Compra segura 🛡️</p>
-    </div>
-  </footer>
+  </div>
 
-  <a
-    href="https://wa.me/50587961399"
-    target="_blank"
-    aria-label="WhatsApp"
-    style="position:fixed;right:20px;bottom:20px;z-index:9999;">
-    💬
-  </a>
+  <div class="bottom">
+    © 2026 GarChéz Boutique · Kevin Garcia & Keyling Sanchez
+  </div>
+</footer>
 
-  <script>
-    const productsContainer = document.getElementById("products");
-    const searchInput = document.getElementById("search");
+<a href="https://wa.me/50587961399" target="_blank"
+   style="position:fixed;right:20px;bottom:20px;width:58px;height:58px;z-index:999;">
+  <svg viewBox="0 0 48 48" width="58" height="58">
+    <circle cx="24" cy="24" r="23" fill="#25D366"/>
+    <path fill="#fff" d="M34.4 13.6A14.7 14.7 0 0 0 24 9.3c-8.1 0-14.7 6.6-14.7 14.7 0 2.6.7 5.1 2 7.3L9.2 38.7l7.6-2c2.1 1.1 4.6 1.7 7.1 1.7 8.1 0 14.7-6.6 14.7-14.7 0-3.9-1.5-7.5-4.2-10.1zM24 35.9c-2.2 0-4.3-.6-6.1-1.7l-.4-.2-4.5 1.2 1.2-4.4-.3-.5a12.1 12.1 0 1 1 10.1 5.6zm6.6-9.1c-.4-.2-2.3-1.1-2.7-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.8-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.2s1.3 3.7 1.5 4c.2.3 2.5 3.9 6 5.4.8.4 1.6.6 2.1.8.9.3 1.7.3 2.3.2.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5z"/>
+  </svg>
+</a>
 
-    let products = [];
+<script>
+const products = document.getElementById("products");
 
-    function renderProducts(list) {
+function escapeHTML(text) {
+  return String(text ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 
-      if (!list.length) {
-        productsContainer.innerHTML = `
-          <div class="empty" style="grid-column:1/-1">
-            No hay productos en oferta disponibles todavía.
-          </div>
-        `;
-        return;
-      }
+function normalizeImage(path) {
+  if (!path) return "";
+  if (path.startsWith("http")) return path;
+  if (path.startsWith("../")) return path;
+  return "../" + path;
+}
 
-      productsContainer.innerHTML = list.map(product => {
+fetch("../data/ofertas.json")
+  .then(response => response.json())
+  .then(items => {
 
-        const images = [];
-
-        if (product.imagen) {
-          images.push(product.imagen);
-        }
-
-        if (Array.isArray(product.fotos)) {
-          product.fotos.forEach(photo => {
-            if (photo) images.push(photo);
-          });
-        }
-
-        const mainImage = images[0] || "";
-
-        return `
-          <article class="product gc-product">
-
-            ${
-              mainImage
-                ? `<img
-                    src="${mainImage}"
-                    alt="${product.nombre || "Producto"}"
-                    class="gc-main-photo"
-                    loading="lazy"
-                  >`
-                : ""
-            }
-
-            <div class="gc-badges">
-              <span class="gc-badge offer">🔥 OFERTA</span>
-
-              ${
-                product.disponibilidad === "Agotado"
-                  ? `<span class="gc-badge out">AGOTADO</span>`
-                  : ""
-              }
-            </div>
-
-            <h3>${product.nombre || "Producto"}</h3>
-
-            <div class="price">
-              ${
-                product.precioAnterior
-                  ? `<span class="gc-old-price">
-                      C$${product.precioAnterior}
-                    </span>`
-                  : ""
-              }
-
-              <strong>C$${product.precio || "0"}</strong>
-            </div>
-
-            <div class="gc-details">
-
-              ${
-                product.color
-                  ? `<div>🎨 <strong>Color:</strong> ${product.color}</div>`
-                  : ""
-              }
-
-              ${
-                product.talla
-                  ? `<div>📏 <strong>Talla:</strong> ${product.talla}</div>`
-                  : ""
-              }
-
-              ${
-                product.descripcion
-                  ? `<div class="gc-description">
-                      ${product.descripcion}
-                    </div>`
-                  : ""
-              }
-
-              ${
-                images.length > 1
-                  ? `
-                    <div class="gc-gallery">
-                      ${images.map(img => `
-                        <img
-                          src="${img}"
-                          alt="${product.nombre || "Producto"}"
-                        >
-                      `).join("")}
-                    </div>
-                  `
-                  : ""
-              }
-
-            </div>
-
-            ${
-              product.disponibilidad !== "Agotado"
-                ? `
-                  <a
-                    href="https://wa.me/50587961399?text=${encodeURIComponent(
-                      "Hola 👋, estoy interesado/a en la oferta: " +
-                      (product.nombre || "") +
-                      " por C$" +
-                      (product.precio || "")
-                    )}"
-                    target="_blank"
-                    class="btn"
-                  >
-                    💬 Comprar por WhatsApp
-                  </a>
-                `
-                : `
-                  <a class="btn gc-buy-disabled">
-                    Agotado
-                  </a>
-                `
-            }
-
-          </article>
-        `;
-      }).join("");
+    if (!Array.isArray(items) || items.length === 0) {
+      products.innerHTML = `
+        <div class="gc-empty">
+          <h2>No hay ofertas disponibles</h2>
+          <p>Próximamente tendremos nuevos productos en oferta. 🛍️</p>
+        </div>
+      `;
+      return;
     }
 
-    fetch("../data/ofertas.json")
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("No se pudo cargar ofertas.json");
-        }
+    products.innerHTML = items.map(producto => {
 
-        return response.json();
-      })
-      .then(data => {
-        products = Array.isArray(data)
-          ? data.filter(product => product.oferta === true)
-          : [];
-
-        renderProducts(products);
-      })
-      .catch(error => {
-        console.error(error);
-
-        productsContainer.innerHTML = `
-          <div class="empty" style="grid-column:1/-1">
-            No hay productos disponibles todavía.
-          </div>
-        `;
-      });
-
-    searchInput.addEventListener("input", function () {
-
-      const text = this.value.toLowerCase().trim();
-
-      const filtered = products.filter(product =>
-        (product.nombre || "").toLowerCase().includes(text) ||
-        (product.color || "").toLowerCase().includes(text) ||
-        (product.talla || "").toLowerCase().includes(text) ||
-        (product.descripcion || "").toLowerCase().includes(text)
+      const nombre = escapeHTML(producto.nombre);
+      const precio = escapeHTML(producto.precio);
+      const precioAnterior = escapeHTML(
+        producto.precio_anterior || producto.precioAnterior || ""
       );
 
-      renderProducts(filtered);
-    });
-  </script>
+      const imagen = normalizeImage(producto.imagen);
+
+      const color = escapeHTML(producto.color);
+      const talla = escapeHTML(producto.talla);
+      const descripcion = escapeHTML(producto.descripcion);
+
+      const disponible =
+        String(producto.disponibilidad || "").toLowerCase() !== "agotado";
+
+      const galeria = producto.galeria || producto.fotos || [];
+
+      let galleryHTML = "";
+
+      if (Array.isArray(galeria) && galeria.length) {
+        galleryHTML = `
+          <div class="gc-gallery">
+            ${galeria.map(foto => `
+              <img src="${normalizeImage(foto)}"
+                   alt="${nombre}"
+                   onclick="this.closest('.gc-product').querySelector('.gc-product-image').src=this.src">
+            `).join("")}
+          </div>
+        `;
+      }
+
+      const whatsappMessage =
+        `Hola 👋, estoy interesado/a en el producto: ${producto.nombre}`;
+
+      return `
+        <article class="gc-product">
+
+          ${producto.oferta || precioAnterior ? `
+            <div class="gc-badge">🔥 OFERTA</div>
+          ` : ""}
+
+          <img
+            src="${imagen}"
+            class="gc-product-image"
+            alt="${nombre}"
+          >
+
+          ${galleryHTML}
+
+          <div class="gc-product-info">
+
+            <div class="gc-product-name">
+              ${nombre}
+            </div>
+
+            <div>
+              ${precioAnterior ? `
+                <span class="gc-old-price">
+                  C$${precioAnterior}
+                </span>
+              ` : ""}
+
+              <span class="gc-price">
+                C$${precio}
+              </span>
+            </div>
+
+            ${color ? `<p><strong>Color:</strong> ${color}</p>` : ""}
+            ${talla ? `<p><strong>Talla:</strong> ${talla}</p>` : ""}
+            ${descripcion ? `<p>${descripcion}</p>` : ""}
+
+            ${
+              disponible
+              ? `
+                <a
+                  class="gc-buy"
+                  href="https://wa.me/50587961399?text=${encodeURIComponent(whatsappMessage)}"
+                  target="_blank">
+                  💬 Comprar por WhatsApp
+                </a>
+              `
+              : `
+                <div class="gc-unavailable">
+                  Agotado
+                </div>
+              `
+            }
+
+          </div>
+        </article>
+      `;
+
+    }).join("");
+
+  })
+  .catch(error => {
+    console.error(error);
+
+    products.innerHTML = `
+      <div class="gc-empty">
+        <h2>No se pudieron cargar las ofertas</h2>
+        <p>Intenta nuevamente más tarde.</p>
+      </div>
+    `;
+  });
+
+document.getElementById("search").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    const buscar = this.value.trim();
+
+    if (buscar) {
+      window.location.href =
+        "../Lo%20Nuevo/index.html?buscar=" +
+        encodeURIComponent(buscar);
+    }
+  }
+});
+</script>
 
 </body>
 </html>
