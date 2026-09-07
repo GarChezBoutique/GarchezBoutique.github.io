@@ -13,5 +13,18 @@
     "descripcion": "Elegante, práctico y perfecto para acompañarte todos los días. 😍\nSu diseño en color fucsia con detalles en café le da un toque moderno y femenino, además de contar con asas y cierre para llevar tus esenciales cómodamente. 👜✨",
     "disponibilidad": "Disponible",
     "oferta": false
+  },
+  {
+    "nombre": "Bolso Cherry Eleganci",
+    "precio": "350",
+    "color": "Blanco",
+    "talla": "Unica",
+    "imagen": "/assets/bolso-2.jpeg",
+    "galeria": [
+      "/assets/bolso2-2.jpeg"
+    ],
+    "descripcion": "🍒 Elegancia, estilo y un toque femenino en un solo bolso. 💕\nLuce este hermoso diseño con estampado de cerezas 🍒, perfecto para complementar tus outfits del día a día, salir de compras o disfrutar de una ocasión especial.\n✨ Diseño moderno y versátil\n💕 Ideal para darle un toque especial a cualquier look",
+    "disponibilidad": "Disponible",
+    "oferta": true
   }
 ]
