@@ -1,11 +1,14 @@
 [
   {
     "nombre": "Bolso Cherry Elegance",
-    "precio": "800",
-    "precio_anterior": "850",
+    "precio": "000",
+    "precio_anterior": "000",
     "color": "Blanco",
     "talla": "Unica",
     "imagen": "/assets/bolso.jpeg",
+    "galeria": [
+      "/assets/bolso2.jpeg"
+    ],
     "descripcion": "👜✨ Bolso Cherry Elegance ✨👜\nDale un toque elegante y femenino a tus looks con este hermoso bolso de diseño moderno y estampado de cerezas. Su estilo versátil es perfecto para complementar tus outfits del día a día, salir de compras o disfrutar de una ocasión especial. 💕\nElegancia, estilo y ese detalle que hace la diferencia. ✨",
     "disponibilidad": "Disponible",
     "oferta": false
