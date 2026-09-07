@@ -1,216 +1,325 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calzado | GarChéz Boutique</title>
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calzado | GarChéz Boutique</title>
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <style>
+    .gc-product {
+      position: relative;
+    }
+
+    .gc-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0;
+    }
+
+    .gc-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #111;
+      color: #fff;
+    }
+
+    .gc-badge.offer {
+      background: #d71920;
+    }
+
+    .gc-badge.out {
+      background: #777;
+    }
+
+    .gc-old-price {
+      text-decoration: line-through;
+      opacity: .6;
+      margin-right: 7px;
+    }
+
+    .gc-details {
+      padding: 10px 0;
+      line-height: 1.6;
+    }
+
+    .gc-description {
+      margin-top: 8px;
+      opacity: .85;
+    }
+
+    .gc-gallery {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .gc-gallery img {
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .gc-main-photo {
+      width: 100%;
+      display: block;
+    }
+
+    .gc-buy-disabled {
+      opacity: .55;
+      pointer-events: none;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <span>🚚 Envíos a toda 🇳🇮 Nicaragua</span>
-  <span>🚚 Envío GRATIS 📍 Chinandega y El Viejo 🇳🇮</span>
-  <span>🛡️ Compra segura</span>
-</div>
+  <div class="topbar">
+    <span>🚚 Envíos a toda 🇳🇮 Nicaragua</span>
+    <span>🚚 Envío GRATIS 📍 Chinandega y El Viejo 🇳🇮</span>
+    <span>🛡️ Compra segura</span>
+  </div>
 
-<header class="header">
+  <header class="header">
+    <div class="head">
+      <a href="../index.html">
+        <img src="../assets/LOGO.jpeg" class="logo" alt="GarChéz Boutique">
+      </a>
 
-  <div class="head">
-
-    <a href="../index.html">
-      <img src="../assets/LOGO.jpeg" class="logo" alt="GarChéz Boutique">
-    </a>
-
-    <div class="search">
-      <span>⌕</span>
-      <input type="search" id="search" placeholder="¿Qué estás buscando?">
-    </div>
-
-    <div class="actions">
-      <div class="action">
-        <b>♙</b>
-        <span>Mi cuenta</span>
+      <div class="search">
+        <span>⌕</span>
+        <input type="search" placeholder="¿Qué estás buscando?" id="search">
       </div>
 
-      <div class="action">
-        <b>🛒</b>
-        <span>Carrito</span>
+      <div class="actions">
+        <span>👤</span>
+        <span>🛒</span>
       </div>
     </div>
+  </header>
 
-  </div>
+  <nav class="nav">
+    <a href="../Damas/index.html">Damas</a>
+    <a href="../Caballeros/index.html">Caballeros</a>
+    <a href="../Calzado/index.html">Calzado</a>
+    <a href="../Bolsos/index.html">Bolsos</a>
+    <a href="../Accesorios/index.html">Accesorios</a>
+    <a href="../Gorras%20y%20Sombreros/index.html">Gorras y Sombreros</a>
+    <a href="../Hogar/index.html">Hogar</a>
+    <a href="../Lo%20Nuevo/index.html">Lo Nuevo</a>
+    <a href="../Ofertas/index.html">Ofertas</a>
+    <a href="../Relojes/index.html">Relojes</a>
+    <a href="../Temporada/index.html">Temporada</a>
+  </nav>
 
-<nav class="nav">
+  <main class="section">
+    <h1 class="title">Calzado</h1>
 
-  <a href="../index.html">Inicio</a>
-  <a href="../Damas/index.html">Damas</a>
-  <a href="../Caballeros/index.html">Caballeros</a>
-  <a href="../Calzado/index.html" class="active">Calzado</a>
-  <a href="../Bolsos/index.html">Bolsos</a>
-  <a href="../Gorras%20y%20Sombreros/index.html">Gorras y Sombreros</a>
-  <a href="../Relojes/index.html">Relojes</a>
-  <a href="../Accesorios/index.html">Accesorios</a>
-  <a href="../Temporada/index.html">Temporada</a>
-  <a href="../Hogar/index.html">Hogar</a>
-  <a href="../Lo%20Nuevo/index.html">Lo Nuevo</a>
-  <a href="../Ofertas/index.html">Ofertas</a>
-
-</nav>
-</header>
-
-
-<main>
-
-<section class="section">
-
-  <div class="title">
-
-    <h1>Calzado</h1>
-
-    <p>
-      Encuentra el calzado ideal para cada ocasión.
-    </p>
-
-  </div>
-
-
-  <div class="products">
-
-    <div class="empty" style="grid-column:1/-1">
-
-      Aquí aparecerán los productos de Calzado.
-
-      <br><br>
-
-      Muy pronto encontrarás zapatos,
-      sandalias, tenis, tacones y mucho más.
-
+    <div class="products" id="products">
+      <div class="empty" style="grid-column:1/-1">
+        Aquí aparecerán los productos de Calzado.
+        <br><br>
+        Muy pronto encontrarás zapatos,
+        sandalias, zapatillas, tenis y mucho más.
+      </div>
     </div>
+  </main>
 
-  </div>
-
-</section>
-
-</main>
-
-
-<footer class="footer">
-
-  <div class="foot">
-
+  <footer class="footer">
     <div>
-
-      <img src="../assets/LOGO.jpeg"
-           class="logo"
-           alt="GarChéz Boutique">
-
-      <p>
-        Moda, calzado, accesorios y mucho más
-        para Nicaragua 🇳🇮.
-      </p>
-
-    </div>
-
-
-    <div>
-
-      <h3>Comprar</h3>
-
-      <a href="../damas/index.html">Damas</a>
-      <a href="../caballeros/index.html">Caballeros</a>
-      <a href="../calzado/index.html">Calzado</a>
-      <a href="../bolsos/index.html">Bolsos</a>
-
-    </div>
-
-
-    <div>
-
-      <h3>Más categorías</h3>
-
-      <a href="../accesorios/index.html">Accesorios</a>
-      <a href="../relojes/index.html">Relojes</a>
-      <a href="../lo-nuevo/index.html">Lo Nuevo</a>
-      <a href="../ofertas/index.html">Ofertas</a>
-
-    </div>
-
-
-    <div>
-
       <h3>GarChéz Boutique</h3>
-
-      <p>
-        <strong>Propietarios:</strong><br>
-        Kevin Garcia<br>
-        Keyling Sanchez
-      </p>
-
-      <p>
-        📱 WhatsApp:
-        <a href="https://wa.me/50587961399" target="_blank">
-          +505 8796-1399
-        </a>
-        <br>
-        📍 Chinandega y El Viejo,
-        🇳🇮 Nicaragua
-      </p>
-
+      <p>Moda, accesorios y estilo para ti.</p>
     </div>
 
-  </div>
+    <div>
+      <h3>Información</h3>
+      <p>Envíos a toda Nicaragua 🇳🇮</p>
+      <p>Compra segura 🛡️</p>
+    </div>
+  </footer>
 
+  <a
+    href="https://wa.me/50587961399"
+    target="_blank"
+    aria-label="WhatsApp"
+    style="position:fixed;right:20px;bottom:20px;z-index:9999;">
+    💬
+  </a>
 
-  <div class="bottom">
-    © 2026 GarChéz Boutique · Kevin Garcia & Keyling Sanchez
-  </div>
+  <script>
+    const productsContainer = document.getElementById("products");
+    const searchInput = document.getElementById("search");
 
-</footer>
+    let products = [];
 
+    function renderProducts(list) {
+      if (!list.length) {
+        productsContainer.innerHTML = `
+          <div class="empty" style="grid-column:1/-1">
+            Aquí aparecerán los productos de Calzado.
+          </div>
+        `;
+        return;
+      }
 
-<a
-  class="whatsapp"
-  href="https://wa.me/50587961399"
-  target="_blank"
-  aria-label="Escribir por WhatsApp">
+      productsContainer.innerHTML = list.map((product, index) => {
+        const images = [];
 
-  <svg viewBox="0 0 32 32"
-       xmlns="http://www.w3.org/2000/svg">
+        if (product.imagen) {
+          images.push(product.imagen);
+        }
 
-    <path d="M19.11 17.36c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.57-1.48-1.84-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.59-.65 1.81-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+        if (Array.isArray(product.fotos)) {
+          product.fotos.forEach(photo => {
+            if (photo) images.push(photo);
+          });
+        }
 
-    <path d="M16.02 3C8.84 3 3 8.84 3 16.02c0 2.29.6 4.45 1.74 6.36L3 29l6.83-1.7a12.94 12.94 0 0 0 6.19 1.57h.01C23.2 28.87 29 23.05 29 16.02 29 8.84 23.2 3 16.02 3zm0 23.7h-.01a10.74 10.74 0 0 1-5.48-1.5l-.39-.23-4.05 1.01 1.08-3.95-.25-.41a10.72 10.72 0 1 1 9.1 5.08z"/>
+        const mainImage = images[0] || "";
 
-  </svg>
+        return `
+          <article class="product gc-product">
 
-</a>
+            ${
+              mainImage
+                ? `<img
+                    src="${mainImage}"
+                    alt="${product.nombre || "Producto"}"
+                    class="gc-main-photo"
+                    loading="lazy"
+                  >`
+                : ""
+            }
 
+            <div class="gc-badges">
+              ${
+                product.oferta
+                  ? `<span class="gc-badge offer">🔥 OFERTA</span>`
+                  : ""
+              }
 
-<script>
+              ${
+                product.disponibilidad === "Agotado"
+                  ? `<span class="gc-badge out">AGOTADO</span>`
+                  : ""
+              }
+            </div>
 
-const search = document.getElementById("search");
+            <h3>${product.nombre || "Producto"}</h3>
 
-search.addEventListener("keydown", function(event) {
+            <div class="price">
+              ${
+                product.precioAnterior
+                  ? `<span class="gc-old-price">C$${product.precioAnterior}</span>`
+                  : ""
+              }
 
-  if (event.key === "Enter") {
+              <strong>C$${product.precio || "0"}</strong>
+            </div>
 
-    const value = search.value.trim();
+            <div class="gc-details">
 
-    if (value !== "") {
+              ${
+                product.color
+                  ? `<div>🎨 <strong>Color:</strong> ${product.color}</div>`
+                  : ""
+              }
 
-      window.location.href =
-        "../lo-nuevo/index.html?buscar=" +
-        encodeURIComponent(value);
+              ${
+                product.talla
+                  ? `<div>📏 <strong>Talla:</strong> ${product.talla}</div>`
+                  : ""
+              }
 
+              ${
+                product.descripcion
+                  ? `<div class="gc-description">${product.descripcion}</div>`
+                  : ""
+              }
+
+              ${
+                images.length > 1
+                  ? `
+                    <div class="gc-gallery">
+                      ${images.map(img => `
+                        <img src="${img}" alt="${product.nombre || "Producto"}">
+                      `).join("")}
+                    </div>
+                  `
+                  : ""
+              }
+
+            </div>
+
+            ${
+              product.disponibilidad !== "Agotado"
+                ? `
+                  <a
+                    href="https://wa.me/50587961399?text=${encodeURIComponent(
+                      "Hola 👋, estoy interesado/a en el producto: " +
+                      (product.nombre || "") +
+                      " por C$" +
+                      (product.precio || "")
+                    )}"
+                    target="_blank"
+                    class="btn"
+                  >
+                    💬 Comprar por WhatsApp
+                  </a>
+                `
+                : `
+                  <a class="btn gc-buy-disabled">
+                    Agotado
+                  </a>
+                `
+            }
+
+          </article>
+        `;
+      }).join("");
     }
 
-  }
+    fetch("../data/calzado.json")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("No se pudo cargar calzado.json");
+        }
+        return response.json();
+      })
+      .then(data => {
+        products = Array.isArray(data) ? data : [];
+        renderProducts(products);
+      })
+      .catch(error => {
+        console.error(error);
 
-});
+        productsContainer.innerHTML = `
+          <div class="empty" style="grid-column:1/-1">
+            No hay productos disponibles todavía.
+          </div>
+        `;
+      });
 
-</script>
+    searchInput.addEventListener("input", function () {
+      const text = this.value.toLowerCase().trim();
+
+      const filtered = products.filter(product =>
+        (product.nombre || "").toLowerCase().includes(text) ||
+        (product.color || "").toLowerCase().includes(text) ||
+        (product.talla || "").toLowerCase().includes(text) ||
+        (product.descripcion || "").toLowerCase().includes(text)
+      );
+
+      renderProducts(filtered);
+    });
+  </script>
 
 </body>
 </html>
