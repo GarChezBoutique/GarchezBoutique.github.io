@@ -26,5 +26,19 @@
     "descripcion": "🍒 Elegancia, estilo y un toque femenino en un solo bolso. 💕\nLuce este hermoso diseño con estampado de cerezas 🍒, perfecto para complementar tus outfits del día a día, salir de compras o disfrutar de una ocasión especial.\n✨ Diseño moderno y versátil\n💕 Ideal para darle un toque especial a cualquier look",
     "disponibilidad": "Disponible",
     "oferta": true
+  },
+  {
+    "nombre": "Bolso estilo Longchamp",
+    "precio": "....",
+    "color": "Café - Caramelo ",
+    "talla": "XS",
+    "imagen": "/assets/CAFE.jpeg",
+    "galeria": [
+      "/assets/CAFE2.jpeg",
+      "/assets/CAFE3.jpeg"
+    ],
+    "descripcion": "Elegante, práctico y perfecto para llevar contigo todo lo que necesitas. 💕 Su diseño en tono café/caramelo con detalles en café oscuro y herrajes dorados le da un toque sofisticado y moderno. 😍",
+    "disponibilidad": "Disponible",
+    "oferta": false
   }
 ]
