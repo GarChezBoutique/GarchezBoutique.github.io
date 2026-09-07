@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gorras y Sombreros | GarChéz Boutique</title>
+  <title>Hogar | GarChéz Boutique</title>
   <link rel="stylesheet" href="../assets/style.css">
 
   <style>
-    .gc-product {
-      position: relative;
-    }
+    .gc-product { position: relative; }
 
     .gc-badges {
       display: flex;
@@ -28,13 +26,8 @@
       color: #fff;
     }
 
-    .gc-badge.offer {
-      background: #d71920;
-    }
-
-    .gc-badge.out {
-      background: #777;
-    }
+    .gc-badge.offer { background: #d71920; }
+    .gc-badge.out { background: #777; }
 
     .gc-old-price {
       text-decoration: line-through;
@@ -120,14 +113,14 @@
   </nav>
 
   <main class="section">
-    <h1 class="title">Gorras y Sombreros</h1>
+    <h1 class="title">Hogar</h1>
 
     <div class="products" id="products">
       <div class="empty" style="grid-column:1/-1">
-        Aquí aparecerán los productos de Gorras y Sombreros.
+        Aquí aparecerán los productos de Hogar.
         <br><br>
-        Muy pronto encontrarás gorras,
-        sombreros y mucho más.
+        Muy pronto encontrarás productos
+        para tu hogar y mucho más.
       </div>
     </div>
   </main>
@@ -160,10 +153,11 @@
     let products = [];
 
     function renderProducts(list) {
+
       if (!list.length) {
         productsContainer.innerHTML = `
           <div class="empty" style="grid-column:1/-1">
-            Aquí aparecerán los productos de Gorras y Sombreros.
+            Aquí aparecerán los productos de Hogar.
           </div>
         `;
         return;
@@ -218,7 +212,9 @@
             <div class="price">
               ${
                 product.precioAnterior
-                  ? `<span class="gc-old-price">C$${product.precioAnterior}</span>`
+                  ? `<span class="gc-old-price">
+                      C$${product.precioAnterior}
+                    </span>`
                   : ""
               }
 
@@ -241,7 +237,9 @@
 
               ${
                 product.descripcion
-                  ? `<div class="gc-description">${product.descripcion}</div>`
+                  ? `<div class="gc-description">
+                      ${product.descripcion}
+                    </div>`
                   : ""
               }
 
@@ -290,10 +288,10 @@
       }).join("");
     }
 
-    fetch("../data/gorras-sombreros.json")
+    fetch("../data/hogar.json")
       .then(response => {
         if (!response.ok) {
-          throw new Error("No se pudo cargar gorras-sombreros.json");
+          throw new Error("No se pudo cargar hogar.json");
         }
 
         return response.json();
@@ -313,6 +311,7 @@
       });
 
     searchInput.addEventListener("input", function () {
+
       const text = this.value.toLowerCase().trim();
 
       const filtered = products.filter(product =>
