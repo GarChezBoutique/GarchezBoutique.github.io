@@ -54,5 +54,20 @@
     "descripcion": "Elegante, práctico y versátil. Su diseño en color negro con detalles café le da un estilo clásico y sofisticado, perfecto para complementar cualquier outfit. 🖤🤎",
     "disponibilidad": "Disponible",
     "oferta": false
+  },
+  {
+    "nombre": "Bolso de Mujer Azul marino con detalles cafes",
+    "precio": "...",
+    "color": "Azul Marino con detalles cafes",
+    "talla": "M y L",
+    "imagen": "/assets/azul2.jpeg",
+    "galeria": [
+      "/assets/azul.jpeg",
+      "/assets/azul3.jpeg",
+      "/assets/azul4.jpeg"
+    ],
+    "descripcion": "✨ Elegante, práctico y versátil. Este bolso combina el azul marino con detalles en café, creando un diseño sofisticado y fácil de combinar. Cuenta con asas de mano y correa larga para llevarlo de diferentes maneras.\n💕 Ideal para el uso diario, trabajo, universidad, salidas y ocasiones especiales.",
+    "disponibilidad": "Disponible",
+    "oferta": false
   }
 ]
