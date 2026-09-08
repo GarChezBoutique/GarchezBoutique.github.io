@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "nombre": "🧸🎀 Ositos Decorativos para Bolso — Un detalle que hace la diferencia 💗",
+    "precio": "...",
+    "color": "UNICO",
+    "talla": "UNICO",
+    "imagen": "/assets/LL.jpeg",
+    "galeria": [
+      "/assets/LL1.jpeg"
+    ],
+    "descripcion": "Dale un toque tierno, divertido y súper original a tus bolsos, carteras o mochilas con estos adorables ositos colgantes. 🧸✨ Su diseño cuidado y sus pequeños detalles los convierten en el accesorio perfecto para complementar cualquier estilo.",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  },
+  {
+    "nombre": "🍒✨ Llavero Cherry Glam",
+    "precio": "...",
+    "color": "Rosado y Rojo",
+    "talla": "UNICO",
+    "imagen": "/assets/M1.jpeg",
+    "galeria": [
+      "/assets/M2.jpeg"
+    ],
+    "descripcion": "Dale un toque femenino, elegante y divertido a tus accesorios con nuestro Llavero Cherry Glam. 🍒💗 Su diseño de cerezas brillantes y detalles dorados lo convierte en el complemento perfecto para darle personalidad a tus bolsos, mochilas o llaves.",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  }
+]
