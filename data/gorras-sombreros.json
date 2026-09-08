@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "nombre": "🧢 Gorras On para Hombre 🖤🩶",
+    "precio": "...",
+    "color": "Gris y Negro",
+    "talla": "Estandar",
+    "imagen": "/assets/GORRA.jpeg",
+    "galeria": [
+      "/assets/GORRA2.jpeg"
+    ],
+    "descripcion": "Dale un toque deportivo y moderno a tu estilo con estas gorras On, disponibles en negro y gris. Su diseño ligero y ventilado las hace ideales para acompañarte en tus actividades deportivas y en el día a día. 🔥\n\n✨ Detalles: • 🖤 Disponible en negro • 🩶 Disponible en gris • 🧢 Diseño deportivo para hombre • 🌬️ Paneles perforados para mayor ventilación • ☀️ Ideales para actividades al aire libre • 🏃 Perfectas para ejercicio y deporte • 👕 Fáciles de combinar • ✨ Diseño moderno y minimalista • 👌 Cómodas para el uso diario",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  },
+  {
+    "nombre": " Gorra Alo para Hombre 🖤",
+    "precio": "...",
+    "color": "Negro y Gris",
+    "talla": "Estandar",
+    "imagen": "/assets/ALO.jpeg",
+    "galeria": [
+      "/assets/ALO2.jpeg"
+    ],
+    "descripcion": "Una gorra clásica, moderna y versátil que combina fácilmente con tus outfits. Ideal para quienes buscan un accesorio cómodo para el día a día, con un diseño deportivo y casual. 🔥\n\n✨ Detalles: • 🖤 Disponible en negro\n* 🩶 Disponible en gris\n* 🧢 Diseño moderno y masculino\n* 👌 Ligera y cómoda\n* 💪 Material resistente\n* 🔄 Ajustable en la parte trasera\n* ☀️ Ideal para uso diario y actividades al aire libre\n* 🏃 Perfecta para un estilo deportivo y casual\n* 👕 Fácil de combinar con diferentes outfits",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  }
+]
