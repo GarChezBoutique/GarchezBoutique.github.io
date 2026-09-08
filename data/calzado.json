@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "nombre": "🩴 Sandalias Old Navy para hombre 💙",
+    "precio": "....",
+    "color": "Azul Marino",
+    "talla": "Variado",
+    "imagen": "/assets/CHINELA.jpeg",
+    "galeria": [
+      "/assets/CHINELA2.jpeg"
+    ],
+    "descripcion": "Comodidad y estilo para el día a día. Estas sandalias Old Navy en color azul marino cuentan con un diseño clásico y versátil, ideales para usar en salidas casuales, paseos, playa o simplemente disfrutar de mayor comodidad durante el día. 👣✨",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  },
+  {
+    "nombre": "🍒 Sandalias Cherry Summer 🌸✨",
+    "precio": "...",
+    "color": "Blancas con estampado",
+    "talla": "Variado",
+    "imagen": "/assets/DAMA.jpeg",
+    "galeria": [
+      "/assets/DAMA2.jpeg"
+    ],
+    "descripcion": "Dale un toque fresco, femenino y divertido a tus looks con nuestras Sandalias Cherry Summer 🍒. Su hermoso estampado de cerezas y sus correas blancas las convierten en el complemento perfecto para disfrutar tus días con comodidad y estilo. 💗",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  }
+]
