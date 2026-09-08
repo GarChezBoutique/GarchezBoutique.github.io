@@ -40,5 +40,19 @@
     "descripcion": "Elegante, práctico y perfecto para llevar contigo todo lo que necesitas. 💕 Su diseño en tono café/caramelo con detalles en café oscuro y herrajes dorados le da un toque sofisticado y moderno. 😍",
     "disponibilidad": "Disponible",
     "oferta": false
+  },
+  {
+    "nombre": "Bolso estilo Longchamp Negro",
+    "precio": "...",
+    "color": "Negro con detalles cafes",
+    "talla": "XS",
+    "imagen": "/assets/negro.jpeg",
+    "galeria": [
+      "/assets/negro2.jpeg",
+      "/assets/negro3.jpeg"
+    ],
+    "descripcion": "Elegante, práctico y versátil. Su diseño en color negro con detalles café le da un estilo clásico y sofisticado, perfecto para complementar cualquier outfit. 🖤🤎",
+    "disponibilidad": "Disponible",
+    "oferta": false
   }
 ]
