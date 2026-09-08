@@ -69,5 +69,99 @@
     "descripcion": "✨ Elegante, práctico y versátil. Este bolso combina el azul marino con detalles en café, creando un diseño sofisticado y fácil de combinar. Cuenta con asas de mano y correa larga para llevarlo de diferentes maneras.\n💕 Ideal para el uso diario, trabajo, universidad, salidas y ocasiones especiales.",
     "disponibilidad": "Disponible",
     "oferta": false
+  },
+  {
+    "nombre": "👜 Bolso Rosa con Detalles Café 🌸🤎",
+    "precio": "...",
+    "color": "Rosa con Detalles Café ",
+    "talla": "M y L",
+    "imagen": "/assets/RO1.jpeg",
+    "galeria": [
+      "/assets/RO2.jpeg",
+      "/assets/RO3.jpeg",
+      "/assets/RO4.jpeg"
+    ],
+    "descripcion": "Elegancia, espacio y estilo en un solo bolso. Este hermoso bolso en tono rosa destaca por su diseño femenino y sofisticado, combinado con detalles en café que le dan un acabado clásico y elegante. Su tamaño amplio te permite llevar cómodamente tus artículos esenciales del día a día. 💕\n\n🤎 Detalles que enamoran: acabados en café, herrajes dorados y un diseño versátil que combina fácilmente con diferentes outfitsROR",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  },
+  {
+    "nombre": "👜✨ Bolso Elegance Cream 🤍🤎 ✨👜",
+    "precio": "....",
+    "color": "Crema",
+    "talla": "M y L",
+    "imagen": "/assets/B1.jpeg",
+    "galeria": [
+      "/assets/B2.jpeg",
+      "/assets/B3.jpeg"
+    ],
+    "descripcion": "Dale un toque elegante, femenino y sofisticado a tus outfits con este hermoso bolso en tono crema, acompañado de delicados detalles en café. 🤎🤍 Su diseño amplio y versátil lo convierte en el complemento perfecto para lucir increíble en cualquier ocasión. ✨\n🌸 Características: • Diseño elegante y moderno",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  },
+  {
+    "nombre": "👜 Bolso Tote Elegante Negro con Detalles en Café 🤎🖤",
+    "precio": "....",
+    "color": "Negro con detalles cafes",
+    "talla": "M y L",
+    "imagen": "/assets/N1.jpeg",
+    "galeria": [
+      "/assets/N2.jpeg",
+      "/assets/N3.jpeg",
+      "/assets/N4.jpeg"
+    ],
+    "descripcion": "👜 Bolso Tote Elegante Negro con Detalles en Café 🤎🖤\n✨ Un bolso amplio, elegante y versátil, perfecto para complementar tus outfits del día a día. Su diseño en color negro con detalles en café y herrajes dorados le da un toque sofisticado y moderno.\n💼 Ideal para llevar tus artículos personales, accesorios y todo lo necesario cómodamente. Sus asas largas permiten llevarlo fácilmente al hombro, convirtiéndolo en una excelente opción para el trabajo, universidad, salidas o viajes.",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  },
+  {
+    "nombre": "👜 Bolso Tote Negro Multi-Bolsillos – Elegancia y Practicidad 🖤✨",
+    "precio": "...",
+    "color": "Negro",
+    "talla": "L y XL",
+    "imagen": "/assets/T1.jpeg",
+    "galeria": [
+      "/assets/T2.jpeg",
+      "/assets/T3.jpeg"
+    ],
+    "descripcion": "Un bolso amplio, moderno y funcional, perfecto para acompañarte en tu día a día. Su diseño en color negro combina fácilmente con cualquier outfit, mientras que sus múltiples bolsillos te permiten mantener tus pertenencias organizadas y siempre a la mano. 🤩",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  },
+  {
+    "nombre": "👜 The Tote Bag Marc Jacobs ",
+    "precio": "...",
+    "color": "Gris y Morado",
+    "talla": "M",
+    "imagen": "/assets/2.jpeg",
+    "descripcion": "✨ Dale un toque moderno y sofisticado a tus looks con este hermoso bolso The Tote Bag, disponible en colores morado y gris. Su diseño versátil es perfecto para acompañarte todos los días, ya sea para salir, trabajar, estudiar o llevar tus esenciales con estilo. 💜🩶",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  },
+  {
+    "nombre": "💜 Bolso Lacoste – Elegancia y estilo para cada ocasión 👜✨",
+    "precio": "...",
+    "color": "Morado",
+    "talla": "M",
+    "imagen": "/assets/l1.jpeg",
+    "galeria": [
+      "/assets/l2.jpeg"
+    ],
+    "descripcion": "Eleva tus looks con este hermoso bolso tote Lacoste en color morado, un diseño elegante, moderno y práctico que combina perfectamente con tu estilo diario. Su amplio formato te permite llevar tus esenciales cómodamente, mientras sus detalles en tono marrón aportan un toque sofisticado. 💜🤎",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  },
+  {
+    "nombre": "🍒🖤 BOLSO CHERRY – UN DETALLE QUE HACE LA DIFERENCIA 👜✨",
+    "precio": "...",
+    "color": "Negro",
+    "talla": "M",
+    "imagen": "/assets/c1.jpeg",
+    "galeria": [
+      "/assets/c2.jpeg"
+    ],
+    "descripcion": "Si buscas un accesorio que combine estilo, personalidad y practicidad, este hermoso bolso es perfecto para ti. Su elegante color negro, acompañado de un delicado estampado de cerezas rojas, crea una combinación femenina y moderna que hará que tus outfits destaquen. 🍒💕\nSu diseño cuenta con asas largas decoradas con detalles de cadena metálica, aportando un toque sofisticado y juvenil. Puedes llevarlo cómodamente al hombro y combinarlo tanto con looks casuales como con outfits más arreglados. ✨",
+    "disponibilidad": "Disponible",
+    "oferta": false
   }
 ]
