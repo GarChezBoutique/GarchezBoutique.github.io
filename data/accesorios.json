@@ -24,5 +24,18 @@
     "descripcion": "Dale un toque femenino, elegante y divertido a tus accesorios con nuestro Llavero Cherry Glam. 🍒💗 Su diseño de cerezas brillantes y detalles dorados lo convierte en el complemento perfecto para darle personalidad a tus bolsos, mochilas o llaves.",
     "disponibilidad": "Disponible",
     "oferta": false
+  },
+  {
+    "nombre": "🕶️ Lentes de Sol Fashion ✨",
+    "precio": "...",
+    "color": "Montura con acabado dorado",
+    "talla": "UNICA",
+    "imagen": "/assets/LENTE.jpeg",
+    "galeria": [
+      "/assets/LENTE2.jpeg",
+      "/assets/LENTE3.jpeg"
+    ],
+    "descripcion": "Dale un toque elegante y moderno a tus outfits con estos hermosos lentes de sol. 😎💗\n\n✨ Detalles: • 🕶️ Diseños modernos y elegantes\n* ✨ Montura con acabado dorado\n* 🖤 Diferentes tonos de lentes disponibles\n* 🪶 Ligeros y cómodos\n* 💪 Material resistente\n* 💎 Perfectos para complementar cualquier look\n* 👗 Ideales para salidas, paseos, playa y uso diario\n* 🎁 Una excelente opción para regalar",
+    "oferta": false
   }
 ]
