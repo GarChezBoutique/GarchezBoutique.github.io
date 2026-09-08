@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "nombre": "⌚✨ SMARTWATCH INTELIGENTE — TECNOLOGÍA Y ESTILO EN TU MUÑECA ✨",
+    "precio": "....",
+    "color": "NEGRO",
+    "talla": "Estandar",
+    "imagen": "/assets/RELOJ.jpeg",
+    "galeria": [
+      "/assets/RELOJ1.jpeg"
+    ],
+    "descripcion": "Lleva contigo un accesorio moderno, práctico y elegante que combina tecnología y comodidad. 💗 Ideal para acompañarte durante el trabajo, tus actividades diarias, ejercicio o simplemente para darle un toque diferente a tu estilo. 😍\n",
+    "disponibilidad": "Disponible",
+    "oferta": false
+  }
+]
